@@ -1,0 +1,325 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUsers (20190303181757)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar, "password" varchar, "screen_name" varchar, "neighborhood" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190303181757_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303181757"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRaccoons (20190303182245)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "raccoons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "size" varchar, "string" varchar, "sex" boolean, "alone" boolean, "favorite_food" varchar, "disposition" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190303182245_create_raccoons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182245"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateLocations (20190303182639)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "neighborhood_id" integer, "raccoon_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_47ebe1fbb9"
+FOREIGN KEY ("neighborhood_id")
+  REFERENCES "neighborhoods" ("id")
+, CONSTRAINT "fk_rails_bc39a4356a"
+FOREIGN KEY ("raccoon_id")
+  REFERENCES "raccoons" ("id")
+)[0m
+  ↳ db/migrate/20190303182639_create_locations.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_locations_on_neighborhood_id" ON "locations" ("neighborhood_id")[0m
+  ↳ db/migrate/20190303182639_create_locations.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_locations_on_raccoon_id" ON "locations" ("raccoon_id")[0m
+  ↳ db/migrate/20190303182639_create_locations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182639"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateNeighborhoods (20190303182841)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "neighborhoods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "character" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190303182841_create_neighborhoods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182841"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateComments (20190303182908)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "raccoon_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_95523bb7a6"
+FOREIGN KEY ("raccoon_id")
+  REFERENCES "raccoons" ("id")
+)[0m
+  ↳ db/migrate/20190303182908_create_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  ↳ db/migrate/20190303182908_create_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_raccoon_id" ON "comments" ("raccoon_id")[0m
+  ↳ db/migrate/20190303182908_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182908"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRaccoonParties (20190303183016)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "raccoon_parties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "raccoon_id" integer, "report_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_022945e5d4"
+FOREIGN KEY ("raccoon_id")
+  REFERENCES "raccoons" ("id")
+, CONSTRAINT "fk_rails_2924e1d4f8"
+FOREIGN KEY ("report_id")
+  REFERENCES "reports" ("id")
+)[0m
+  ↳ db/migrate/20190303183016_create_raccoon_parties.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_raccoon_parties_on_raccoon_id" ON "raccoon_parties" ("raccoon_id")[0m
+  ↳ db/migrate/20190303183016_create_raccoon_parties.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_raccoon_parties_on_report_id" ON "raccoon_parties" ("report_id")[0m
+  ↳ db/migrate/20190303183016_create_raccoon_parties.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303183016"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateReports (20190303183424)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "reports" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time" datetime, "location" varchar, "user_id" integer, "neighborhood_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c7699d537d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_f5dca4ac59"
+FOREIGN KEY ("neighborhood_id")
+  REFERENCES "neighborhoods" ("id")
+)[0m
+  ↳ db/migrate/20190303183424_create_reports.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reports_on_user_id" ON "reports" ("user_id")[0m
+  ↳ db/migrate/20190303183424_create_reports.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reports_on_neighborhood_id" ON "reports" ("neighborhood_id")[0m
+  ↳ db/migrate/20190303183424_create_reports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303183424"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-03-03 18:51:41.163093"], ["updated_at", "2019-03-03 18:51:41.163093"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2019-03-03 18:52:25.947443"], ["updated_at", "2019-03-03 18:52:25.947443"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRaccoon Load (0.5ms)[0m  [1m[34mSELECT  "raccoons".* FROM "raccoons" INNER JOIN "comments" ON "raccoons"."id" = "comments"."raccoon_id" WHERE "comments"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mNeighborhood Load (0.5ms)[0m  [1m[34mSELECT  "neighborhoods".* FROM "neighborhoods" INNER JOIN "reports" ON "neighborhoods"."id" = "reports"."neighborhood_id" WHERE "reports"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mReport Load (0.4ms)[0m  [1m[34mSELECT  "reports".* FROM "reports" WHERE "reports"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mRaccoon Load (7.8ms)[0m  [1m[34mSELECT  "raccoons".* FROM "raccoons" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (8.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateReports (20190303183424)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (4.8ms)[0m  [1m[35mDROP TABLE "reports"[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190303183424"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRaccoonParties (20190303183016)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "raccoon_parties"[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190303183016"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateComments (20190303182908)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190303182908"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateNeighborhoods (20190303182841)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "neighborhoods"[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190303182841"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateLocations (20190303182639)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "locations"[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190303182639"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRaccoons (20190303182245)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "raccoons"[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190303182245"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUsers (20190303181757)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190303181757"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateUsers (20190303181757)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190303181757_create_users.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar, "password_digest" varchar, "screen_name" varchar, "neighborhood" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190303181757_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303181757"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRaccoons (20190303182245)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "raccoons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "size" varchar, "string" varchar, "sex" boolean, "alone" boolean, "favorite_food" varchar, "disposition" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190303182245_create_raccoons.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182245"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateLocations (20190303182639)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "neighborhood_id" integer, "raccoon_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_47ebe1fbb9"
+FOREIGN KEY ("neighborhood_id")
+  REFERENCES "neighborhoods" ("id")
+, CONSTRAINT "fk_rails_bc39a4356a"
+FOREIGN KEY ("raccoon_id")
+  REFERENCES "raccoons" ("id")
+)[0m
+  ↳ db/migrate/20190303182639_create_locations.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_locations_on_neighborhood_id" ON "locations" ("neighborhood_id")[0m
+  ↳ db/migrate/20190303182639_create_locations.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_locations_on_raccoon_id" ON "locations" ("raccoon_id")[0m
+  ↳ db/migrate/20190303182639_create_locations.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182639"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateNeighborhoods (20190303182841)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "neighborhoods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "character" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190303182841_create_neighborhoods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182841"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateComments (20190303182908)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "raccoon_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_03de2dc08c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_95523bb7a6"
+FOREIGN KEY ("raccoon_id")
+  REFERENCES "raccoons" ("id")
+)[0m
+  ↳ db/migrate/20190303182908_create_comments.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  ↳ db/migrate/20190303182908_create_comments.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_raccoon_id" ON "comments" ("raccoon_id")[0m
+  ↳ db/migrate/20190303182908_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303182908"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateRaccoonParties (20190303183016)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "raccoon_parties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "raccoon_id" integer, "report_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_022945e5d4"
+FOREIGN KEY ("raccoon_id")
+  REFERENCES "raccoons" ("id")
+, CONSTRAINT "fk_rails_2924e1d4f8"
+FOREIGN KEY ("report_id")
+  REFERENCES "reports" ("id")
+)[0m
+  ↳ db/migrate/20190303183016_create_raccoon_parties.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_raccoon_parties_on_raccoon_id" ON "raccoon_parties" ("raccoon_id")[0m
+  ↳ db/migrate/20190303183016_create_raccoon_parties.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_raccoon_parties_on_report_id" ON "raccoon_parties" ("report_id")[0m
+  ↳ db/migrate/20190303183016_create_raccoon_parties.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303183016"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateReports (20190303183424)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "reports" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time" datetime, "location" varchar, "user_id" integer, "neighborhood_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c7699d537d"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_f5dca4ac59"
+FOREIGN KEY ("neighborhood_id")
+  REFERENCES "neighborhoods" ("id")
+)[0m
+  ↳ db/migrate/20190303183424_create_reports.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_reports_on_user_id" ON "reports" ("user_id")[0m
+  ↳ db/migrate/20190303183424_create_reports.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_reports_on_neighborhood_id" ON "reports" ("neighborhood_id")[0m
+  ↳ db/migrate/20190303183424_create_reports.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190303183424"]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23

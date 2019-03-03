@@ -3,4 +3,5 @@ class User < ApplicationRecord
   has_many :raccoons, through: :comments
   has_many :reports
   has_many :neighborhoods, through: :reports
+  has_secure_password
 end
