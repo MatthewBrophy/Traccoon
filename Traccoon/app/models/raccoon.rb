@@ -1,0 +1,2 @@
+class Raccoon < ApplicationRecord
+end
