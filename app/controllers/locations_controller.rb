@@ -10,6 +10,7 @@ class LocationsController < ApplicationController
      end
   
      def create
+      
      end
   
      def show
@@ -29,6 +30,6 @@ class LocationsController < ApplicationController
      end
   
      def location_params
-      params.require(:location).permit(:name, :id)
+      
      end
 end
