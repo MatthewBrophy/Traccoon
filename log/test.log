@@ -1,0 +1,73 @@
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "raccoon_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_raccoon_id" ON "comments" ("raccoon_id")[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "locations"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "locations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "neighborhood_id" integer, "raccoon_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX "index_locations_on_neighborhood_id" ON "locations" ("neighborhood_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_locations_on_raccoon_id" ON "locations" ("raccoon_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "neighborhoods"[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "neighborhoods" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "character" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "raccoon_parties"[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "raccoon_parties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "raccoon_id" integer, "report_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX "index_raccoon_parties_on_raccoon_id" ON "raccoon_parties" ("raccoon_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX "index_raccoon_parties_on_report_id" ON "raccoon_parties" ("report_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "raccoons"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "raccoons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "size" varchar, "string" varchar, "sex" boolean, "alone" boolean, "favorite_food" varchar, "disposition" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reports"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "reports" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "time" datetime, "location" varchar, "user_id" integer, "neighborhood_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX "index_reports_on_neighborhood_id" ON "reports" ("neighborhood_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX "index_reports_on_user_id" ON "reports" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar, "email" varchar, "password_digest" varchar, "screen_name" varchar, "neighborhood" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190303183424)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190303183016),
+(20190303182908),
+(20190303181757),
+(20190303182639),
+(20190303182245),
+(20190303182841);
+
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2019-03-03 21:02:30.280012"], ["updated_at", "2019-03-03 21:02:30.280012"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "neighborhoods"[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (1.5ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Delete (1.2ms)[0m  [1m[31mDELETE FROM "locations"[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "raccoons"[0m
+  [1m[36mFixture Delete (1.3ms)[0m  [1m[31mDELETE FROM "raccoon_parties"[0m
+  [1m[36mFixture Delete (1.6ms)[0m  [1m[31mDELETE FROM "reports"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "character", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2019-03-03 21:04:14.405430', '2019-03-03 21:04:14.405430', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "character", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2019-03-03 21:04:14.405430', '2019-03-03 21:04:14.405430', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "neighborhoods"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "comments"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "locations"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "raccoons"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "raccoon_parties"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "reports"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "character", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2019-03-03 21:04:14.440599', '2019-03-03 21:04:14.440599', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "neighborhoods" ("name", "character", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2019-03-03 21:04:14.440599', '2019-03-03 21:04:14.440599', 298486374)[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m

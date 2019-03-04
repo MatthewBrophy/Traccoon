@@ -3,6 +3,9 @@ class CreateLocations < ActiveRecord::Migration[5.2]
     create_table :locations do |t|
       t.belongs_to :neighborhood, foreign_key: true
       t.belongs_to :raccoon, foreign_key: true
+      t.string :address
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end
