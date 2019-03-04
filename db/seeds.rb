@@ -1,11 +1,4 @@
 require 'faker'
-User.destroy_all
-Neighborhood.destroy_all
-Comment.destroy_all
-Raccoon.destroy_all
-Location.destroy_all
-Report.destroy_all
-
 Neighborhood.create(name: "Ballard", character: "Urban")
 Neighborhood.create(name: "West Seattle", character: "Coastal")
 Neighborhood.create(name: "Downtown Seattle", character: "Urban")
@@ -20,6 +13,6 @@ Neighborhood.create(name: "Shoreline", character: "Urban")
 end
 
 
-60.times do Raccoon.create!(name: Faker::Name.first_name, color: Faker::Color.color_name, size: ["small", "medium", "large", "massive"].sample, gender: Faker::Gender.binary_type, alone: Faker::Boolean.boolean(0.2), favorite_food: Faker::Food.dish, disposition: ["friendly", "shy", "aggressive", "loving", "defensive"].sample)
+60.times do Raccoon.create!(name: Faker::Name.first_name, color: ["Brown", "Black", "Tan", "Grey", "White", "Red"].sample, size: ["small", "medium", "large", "massive"].sample, gender: Faker::Gender.binary_type, favorite_food: Faker::Food.dish, disposition: ["friendly", "shy", "aggressive", "loving", "defensive"].sample, user_id: User.all.sample.id)
 end
 
