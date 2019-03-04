@@ -4,8 +4,7 @@ class CreateRaccoons < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :color
       t.string :size
-      t.string :string
-      t.boolean :sex
+      t.string :gender
       t.boolean :alone
       t.string :favorite_food
       t.string :disposition
