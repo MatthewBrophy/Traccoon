@@ -13,6 +13,8 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }
   has_secure_password
 
+  
+
   def comments #see all comments made by a user
     self.comments
   end
@@ -31,4 +33,6 @@ class User < ApplicationRecord
 
   def favorite_raccoon #see which raccoon has been reported the most by a user
   end
+
+  
 end
