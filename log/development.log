@@ -1336,3 +1336,301 @@ FOREIGN KEY ("neighborhood_id")
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "beau@dibbertkoepp.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "iac@quitzon.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dong@legros.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "jermainegoyette@hettinger.info"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "adela@sporereffertz.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "donnieankunding@feest.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "jeraldine@little.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "venearobel@funklemke.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "shemikaboyle@prosacco.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "dale@keeling.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "marshall@towne.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "mellisa@dibbertstracke.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "yuettegerhold@dubuque.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "norbertolind@glover.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "lida@fay.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "shameka@hartmann.info"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "merri@ricefeeney.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "noel@ratkemedhurst.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "waylonschroeder@hermistonbarrows.info"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "kenbarrows@mclaughlin.info"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "Matt@matt.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "Matt@matt.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Matt"], ["email", "matt@matt.com"], ["password_digest", "$2a$10$1tWxlQQsJrDoI.Bg3Qk/..wm4wJ.6tGaxjv/BsB4783RIVrvPKFSW"], ["created_at", "2019-03-04 17:27:12.024312"], ["updated_at", "2019-03-04 17:27:12.024312"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/MBrophy/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "daren@kunze.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (8.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Truman Bartell"], ["email", "daren@kunze.org"], ["password_digest", "$2a$10$qERBoOzgZbXbs5mp1k6GAu8va2hAV3js4hs1XaIoUaW2bXZNexfrC"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:51.426051"], ["updated_at", "2019-03-04 17:27:51.426051"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "lonniemarks@bechtelarschuster.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Chang Beer"], ["email", "lonniemarks@bechtelarschuster.net"], ["password_digest", "$2a$10$3xIvirmAYgXqOH6q4oNn3uXZ4m1e4cTG8pi7/JyQP3kNQrRFS5Kjy"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:51.541811"], ["updated_at", "2019-03-04 17:27:51.541811"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "sharita@kuhlmanupton.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Frances Beatty"], ["email", "sharita@kuhlmanupton.biz"], ["password_digest", "$2a$10$Ox2Y94gFZDhneg//ayYTaOB2zJ5LibjJZgj8hD/oitfjiqoVQklHi"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:51.656007"], ["updated_at", "2019-03-04 17:27:51.656007"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "claudrempel@walshwilliamson.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Darin Hintz"], ["email", "claudrempel@walshwilliamson.name"], ["password_digest", "$2a$10$vKp3xq1Z4p67Q1fNSM/vbelG4gTc0Fqv6CODhNe1dUUAeSwEnUGmC"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:51.774342"], ["updated_at", "2019-03-04 17:27:51.774342"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "steffaniewisozk@beattymarvin.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hyman Hintz"], ["email", "steffaniewisozk@beattymarvin.name"], ["password_digest", "$2a$10$eMg7NkEAN4zzq.vEBFXmOulAjaeP.K826yl67nl40XkyrwnRGXZEi"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:51.871561"], ["updated_at", "2019-03-04 17:27:51.871561"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "clelia@mann.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Pasquale Wolf"], ["email", "clelia@mann.co"], ["password_digest", "$2a$10$g7gDzAn7tEInwHT/fQBGcucopvz9Qs17XkrFiINp9azMUcIjoJmRS"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:51.980006"], ["updated_at", "2019-03-04 17:27:51.980006"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "yerjakubowski@goldnernikolaus.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Sueann Swaniawski"], ["email", "yerjakubowski@goldnernikolaus.co"], ["password_digest", "$2a$10$or/KzUIEJjdT8f2QMwbmIuqdYpbBXlqDAcf5UJr5m7YL9zlV3DV0q"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.096877"], ["updated_at", "2019-03-04 17:27:52.096877"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "magali@erdman.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Shane Heathcote"], ["email", "magali@erdman.net"], ["password_digest", "$2a$10$qnqr8GzYGyxSo/T.z7f5EeNZQhIXLheRCJ1rzePljrYsC0AxhwIkm"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.226227"], ["updated_at", "2019-03-04 17:27:52.226227"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ruthpagac@cremin.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Martin Howell"], ["email", "ruthpagac@cremin.io"], ["password_digest", "$2a$10$3Pty89U1Ej6wHukhIZh8LOfmm09W2OysoZDwAV6y/XJMKe4HQ.mtW"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.332838"], ["updated_at", "2019-03-04 17:27:52.332838"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "cecille@ebert.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Lucius Berge"], ["email", "cecille@ebert.co"], ["password_digest", "$2a$10$zY9g944cPRgBRoaSzWN1BOuHJVj5kFHXEkmXEfj81VdrPoRKn/uB6"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.494964"], ["updated_at", "2019-03-04 17:27:52.494964"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "augustbarrows@gradyschultz.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Felipe Dibbert"], ["email", "augustbarrows@gradyschultz.com"], ["password_digest", "$2a$10$12XAo0p6dl.viwWcziTcu.M..wJXoV55I8Oo5P3zpf2HsbGw74H3i"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.614415"], ["updated_at", "2019-03-04 17:27:52.614415"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "karl@muller.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bruno Beatty"], ["email", "karl@muller.org"], ["password_digest", "$2a$10$hY.xnQeRTa6X29/lsge8AO5zx0NNSELkti7X556Nd0NJKp4kpYlQW"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.728229"], ["updated_at", "2019-03-04 17:27:52.728229"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "kaleighgleason@goyette.info"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Josue Armstrong"], ["email", "kaleighgleason@goyette.info"], ["password_digest", "$2a$10$r3Pjkmq2N9sOs6y1Fg.FwudhBIUfB3CW4ZGfklrb6xZLxw7Pt55ey"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.840803"], ["updated_at", "2019-03-04 17:27:52.840803"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "martin@mcclure.name"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Elisha Schroeder"], ["email", "martin@mcclure.name"], ["password_digest", "$2a$10$jpyOTJBUyQlBGXhlw2H5Wu214FOTErCATH6HgESEQFO5CoS3SkHym"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:52.953152"], ["updated_at", "2019-03-04 17:27:52.953152"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "michelsporer@darekaulke.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Josephine Keebler Jr."], ["email", "michelsporer@darekaulke.biz"], ["password_digest", "$2a$10$ifnpH8Z9vOrZtvGq2TdeIOr7aZysR8akbhOWc2OktKnxmjpmZZtXm"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:53.069330"], ["updated_at", "2019-03-04 17:27:53.069330"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "roxane@grahamkautzer.org"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cassaundra Gutmann"], ["email", "roxane@grahamkautzer.org"], ["password_digest", "$2a$10$ffOmnuyDUeRR23tIR9T.y.5Yd9AOjATXwfGeqNqMnIf5Sv3ompev."], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:53.187619"], ["updated_at", "2019-03-04 17:27:53.187619"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "lucianalind@ratke.biz"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Willian Kuhn"], ["email", "lucianalind@ratke.biz"], ["password_digest", "$2a$10$HtCXSWK5rrFGYdTkBUiTZOarNuREq/S/0gsO/44giBt8Wprcd.VKG"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:53.289642"], ["updated_at", "2019-03-04 17:27:53.289642"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "keenanfeil@huelratke.net"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Winnie Lemke"], ["email", "keenanfeil@huelratke.net"], ["password_digest", "$2a$10$60USpenNgiGXpVqw/7w/VuVl5eQ9DlqnwCG9zbxx2x4beX77.e2vq"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:53.404833"], ["updated_at", "2019-03-04 17:27:53.404833"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "camie@oconner.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Warner Ondricka"], ["email", "camie@oconner.io"], ["password_digest", "$2a$10$6mnkqGBMcFVIY2WGYJhAtOWLVkh2PwpkOi2NV2pzvc/hoi.mG6TKO"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:53.510993"], ["updated_at", "2019-03-04 17:27:53.510993"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "jennahickle@kilback.io"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "neighborhood", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Peggy Barrows"], ["email", "jennahickle@kilback.io"], ["password_digest", "$2a$10$.QTt9JTCFPBf0VERyQ67Pu8spAkfj13nZS.P61hXjFus9SdU3iuc2"], ["neighborhood", "neighborhood"], ["created_at", "2019-03-04 17:27:53.625813"], ["updated_at", "2019-03-04 17:27:53.625813"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
