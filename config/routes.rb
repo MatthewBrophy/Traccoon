@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   resources :raccoons
   resources :users
   resources :sessions
-  resources :welcome, only: :show
+  resource :welcome, only: :show
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
