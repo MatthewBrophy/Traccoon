@@ -18,7 +18,7 @@ def seed_users
   puts "Seeding Users"
   20.times do 
     puts "Creating User"
-    User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: "password", neighborhood: Neighborhood.all.sample.name)
+    User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: "password", neighborhood: Neighborhood.all.sample.id)
     puts "Successfully Created User"
   end
 end
@@ -31,16 +31,6 @@ def seed_raccoons
     puts "Successfully Created Raccoon"
   end
 end
-
-def seed_reports
-  puts "Seeding Reports"
-  100.times do 
-    puts "Creating Report"
-    Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, neighborhood_id: Neighborhood.all.sample.id, location_id: Location.all.sample.id)
-    puts "Successfully Created Report"
-  end
-end
-
 
 #Ballard Locations
 def seed_ballard
@@ -526,6 +516,7 @@ def seed_shoreline
   puts "Successfully Seeded Shoreline"
 end
 
+# seed_locations
 def seed_locations
   seed_ballard
   seed_west_seattle
@@ -538,7 +529,15 @@ def seed_locations
   seed_shoreline
 end
 
-# seed_locations
+#seed reports
+def seed_reports
+  puts "Seeding Reports"
+  100.times do 
+    puts "Creating Report"
+    Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, location_id: Location.all.sample.id)
+    puts "Successfully Created Report"
+  end
+end
 
 def seed_raccoon_parties
   puts "Seeding Raccoon Parties"

@@ -8,18 +8,17 @@
 <%= f.label :time, "Date" %>
 <%= f.date_field :time %><br><br>
   
-<%= f.label :neighborhood, "Select a Neighborhood" %>
-<%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name %><br><br>
-
 <%= f.fields_for :raccoons, @report.raccoons.build do |raccoons_fields| %>
-<%= f.label :name, "Select a Raccoon!" %>  
-<%= f.collection_select :raccoon_ids, Raccoon.all, :id, :name %>   
-<% end %>
+  <%= f.label :name, "Select a Raccoon!" %>  
+  <%= f.collection_check_boxes :raccoon_ids, Raccoon.all, :id, :name %>   
+<% end %><br><br>
 
 <%= f.fields_for :location do |location_fields| %>
   <%= f.label :address, "Enter an address" %>
   <%= location_fields.text_field :address %><br><br>
-  <% end %>
+  
+  <%= location_fields.collection_select :neighborhood_id, Neighborhood.all, :id, :name %>
+<% end %>
 
 <%= f.submit %>
 <% end %>

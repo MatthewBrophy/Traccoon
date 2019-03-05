@@ -11,11 +11,8 @@ class ReportsController < ApplicationController
   end
 
   def create
-    @report = Report.new(report_params)
-    @report.location.neighborhood = @report.neighborhood
-    @report.save
-    @report.location_id = @report.location.id
-    @report.save
+    @report = Report.create(report_params)
+    byebug
     redirect_to @report
   end 
 
@@ -36,6 +33,6 @@ class ReportsController < ApplicationController
   end
 
   def report_params 
-    params.require(:report).permit(:user, :time, :neighborhood, :raccoon, :user_id, :neighborhood_id, :raccoon_ids, :location_attributes => {})
+    params.require(:report).permit(:user_id, :time, :location_attributes => {}, :raccoon_ids => [])
   end
 end
