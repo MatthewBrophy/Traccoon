@@ -1,0 +1,27 @@
+<h1>This is a new Raccoon sighting report!</h1>
+
+<%= form_for @report do |f| %>
+<!--hidden user field pre-set by session ID-->
+<%= f.label :user_id, "Select a User" %>
+<%= f.collection_select :user_id, User.all, :id, :name %><br><br>
+
+<%= f.label :time, "Date" %>
+<%= f.date_field :time %><br><br>
+  
+<%= f.label :neighborhood, "Select a Neighborhood" %>
+<%= f.collection_select :neighborhood_id, Neighborhood.all, :id, :name %><br><br>
+
+<%= f.fields_for :raccoons, @report.raccoons.build do |raccoons_fields| %>
+<%= f.label :name, "Select a Raccoon!" %>  
+<%= f.collection_select :raccoon_ids, Raccoon.all, :id, :name %>   
+<% end %>
+
+<%= f.fields_for :location do |location_fields| %>
+  <%= f.label :address, "Enter an address" %>
+  <%= location_fields.text_field :address %><br><br>
+  <% end %>
+
+<%= f.submit %>
+<% end %>
+
+

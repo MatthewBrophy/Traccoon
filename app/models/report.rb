@@ -4,4 +4,9 @@ class Report < ApplicationRecord
   has_many :raccoon_parties
   has_many :raccoons, through: :raccoon_parties
   has_one :location
+  accepts_nested_attributes_for :location
+
+
+  
+
 end

@@ -23,14 +23,12 @@ ActiveRecord::Schema.define(version: 2019_03_03_183424) do
 
   create_table "locations", force: :cascade do |t|
     t.integer "neighborhood_id"
-    t.integer "raccoon_id"
     t.string "address"
     t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["neighborhood_id"], name: "index_locations_on_neighborhood_id"
-    t.index ["raccoon_id"], name: "index_locations_on_raccoon_id"
   end
 
   create_table "neighborhoods", force: :cascade do |t|
