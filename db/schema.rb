@@ -64,11 +64,9 @@ ActiveRecord::Schema.define(version: 2019_03_03_183424) do
 
   create_table "reports", force: :cascade do |t|
     t.datetime "time"
-    t.string "address"
-    t.float "latitude"
-    t.float "longitude"
     t.integer "user_id"
     t.integer "neighborhood_id"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["neighborhood_id"], name: "index_reports_on_neighborhood_id"
