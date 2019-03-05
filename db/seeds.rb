@@ -25,7 +25,7 @@ end
 
 def seed_raccoons
   puts "Seeding Raccoons"
-  60.times do
+  50.times do
     puts "Creating Raccoon"
     Raccoon.create!(name: Faker::Name.first_name, color: ["Brown", "Black", "Tan", "Grey", "White", "Red"].sample, size: ["small", "medium", "large", "massive"].sample, gender: Faker::Gender.binary_type, favorite_food: Faker::Food.dish, disposition: ["friendly", "shy", "aggressive", "loving", "defensive"].sample, user_id: User.all.sample.id)
     puts "Successfully Created Raccoon"
@@ -34,7 +34,7 @@ end
 
 def seed_reports
   puts "Seeding Reports"
-  60.times do 
+  100.times do 
     puts "Creating Report"
     Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, neighborhood_id: Neighborhood.all.sample.id, location_id: Location.all.sample.id)
     puts "Successfully Created Report"
@@ -541,14 +541,17 @@ end
 # seed_locations
 
 def seed_raccoon_parties
-  50.times do 
+  puts "Seeding Raccoon Parties"
+  200.times do 
+    puts "Raccoon Party!!!!!!"
     RaccoonParty.create(raccoon_id: Raccoon.all.sample.id, report_id: Report.all.sample.id)
   end
+  puts "Raccoon Parties have ended :(..."
 end
 
 seed_neighborhoods
 seed_users
 seed_raccoons
-seed_ballard
+seed_locations
 seed_reports
 seed_raccoon_parties
