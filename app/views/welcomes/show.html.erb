@@ -6,4 +6,5 @@
 <%= raccoon.name %>
 <% end %> -->
 <%= link_to  "My profile", user_path(@current_user) %> <br>
+<%= link_to  "Report a Raccoon", new_report_path %>
 <%= link_to 'Logout', session_path(@current_user), method: :delete %>
