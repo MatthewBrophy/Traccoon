@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>This is a new Raccoon sighting report!</h1>
 
 <%= form_for @report do |f| %>
@@ -26,13 +25,3 @@
 <% end %>
 
 
-=======
-<%= form_for @report do |f| %>
-<%= f.label :time, "Time: " %>
-<%= f.date_field :time %>
-<%= f.label :neighborhood, "Neighborhood" %>
-<%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
-
-<%= f.submit %>
-<% end %>
->>>>>>> 06062a3154c2282e1348ed2df39f1bab0530f638

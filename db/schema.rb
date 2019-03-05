@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_03_183424) do
+ActiveRecord::Schema.define(version: 2019_03_05_191500) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_03_03_183424) do
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "report_id"
     t.index ["neighborhood_id"], name: "index_locations_on_neighborhood_id"
   end
 

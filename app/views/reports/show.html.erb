@@ -1,3 +1,9 @@
 <h1>Hey look a report</h1>
 
-<%= @report.time %>
+<%= @report.time %><br>
+<%= @report.location.address %>
+<% @report.raccoons.each do |raccoon| %>
+  <ul>
+    <li><%= raccoon.name %></li>
+  </ul>
+<% end %>
