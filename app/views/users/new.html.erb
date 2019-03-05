@@ -1,3 +1,6 @@
+<% if flash[:message] %>
+<p><%= flash[:message] %></p>
+<% end %>
 <%= form_for @user do |f| %>
 
 <%= f.label :name, "Name" %>

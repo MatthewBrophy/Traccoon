@@ -1,3 +1,8 @@
+
+<% if flash[:message] %>
+<p><%= flash[:message] %></p>
+<% end %>
+
 <%= form_for :user, url: sessions_path do |f| %>
 <%= f.label :email, "Email" %>
 <%= f.text_field :email %>

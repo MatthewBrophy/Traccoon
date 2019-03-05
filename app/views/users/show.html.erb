@@ -1,5 +1,6 @@
 <h2><%= @user.name.capitalize %></h2>
 <p>Email: <%= @user.email %></p>
-<p>Neighborhood: <%= @user.neighborhood.capitalize %></p>
+<p>Neighborhood: <%= @user.neighborhood %></p>
 
-<%= link_to 'Logout', session_path(@user), method: :delete %>
+<%= link_to 'Logout', session_path(@user), method: :delete %><br>
+<%= link_to  "Seen a raccoon? Create a report!", new_report_path %>
