@@ -1,0 +1,8 @@
+<%= form_for @report do |f| %>
+<%= f.label :time, "Time: " %>
+<%= f.date_field :time %>
+<%= f.label :neighborhood, "Neighborhood" %>
+<%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
+
+<%= f.submit %>
+<% end %>

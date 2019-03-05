@@ -1,5 +1,7 @@
 class ReportsController < ApplicationController
      before_action :set_report, only: [:edit, :update, :show]
+     before_action :current_user
+     before_action :require_login
      
      def index 
         @reports = Report.all
@@ -10,9 +12,12 @@ class ReportsController < ApplicationController
      end 
   
      def create 
+      @report = Report.create(report_params)
+      # redirect_to report_path(@report)
      end 
   
      def show 
+
      end 
   
      def update 
@@ -28,6 +33,6 @@ class ReportsController < ApplicationController
      end
   
      def report_params 
-        params.require(:report).permit(:time, :address, :latitude, :longitude)
+        params.require(:report).permit(:time, :neighborhood_id)
      end
 end
