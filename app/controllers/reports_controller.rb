@@ -12,7 +12,6 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.create(report_params)
-    byebug
     redirect_to @report
   end 
 

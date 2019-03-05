@@ -1,10 +1,11 @@
 <h1>This is a collection of all filed reports.</h1>
 
 <% @reports.each do |report| %>
-<h2><%= report.user.name %></h2>
-<li><%= report.time %></li>
-<li><%= report.location %></li>
-  <li><% report.raccoons.each do |raccoon| %></li>
-    <li><%= raccoon.name %></li>
+<h3>Report # <%= report.id %></h3>
+<b>Report Date: <%= report.report_date %></b><br>
+<b>Neighborhood:</b> <%= report.neigh_name %> | <b>Address:</b> <%= report.address %><br>
+<b>Raccoons involved in the incident:</b>
+  <% report.raccoons.each do |raccoon| %>
+   | <%= raccoon.name %> |
   <% end %>
 <% end %>

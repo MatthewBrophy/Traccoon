@@ -14,10 +14,11 @@
 <% end %><br><br>
 
 <%= f.fields_for :location do |location_fields| %>
+  <%= location_fields.label :neighborhood_id, "Select a Neighborhood" %>
+  <%= location_fields.collection_select :neighborhood_id, Neighborhood.all, :id, :name %><br><br>
   <%= f.label :address, "Enter an address" %>
   <%= location_fields.text_field :address %><br><br>
   
-  <%= location_fields.collection_select :neighborhood_id, Neighborhood.all, :id, :name %>
 <% end %>
 
 <%= f.submit %>
