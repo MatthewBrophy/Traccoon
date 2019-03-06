@@ -34,5 +34,7 @@ class User < ApplicationRecord
   def favorite_raccoon #see which raccoon has been reported the most by a user
   end
 
+  def raccoons_in_neighborhood #see what reports have been created in your area can possibly use current_user neighborhood?
+  end
   
 end
