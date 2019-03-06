@@ -684,5 +684,6 @@ seed_neighborhoods
 seed_users
 seed_raccoons
 seed_lake_city
+seed_queen_anne
 seed_reports
 seed_raccoon_parties

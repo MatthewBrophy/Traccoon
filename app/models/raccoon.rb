@@ -8,6 +8,9 @@ class Raccoon < ApplicationRecord
   has_many :neighborhoods, through: :locations
 
   def favorite_neighborhood
-    binding.pry
+    neighborhoods_visisted = self.neighborhoods
+    neighborhood_id = neighborhoods_visited.ids.max_by { |i| n.count(i) }
+    Neighborhood.find(neighborhood_id).name
+    
   end
 end
