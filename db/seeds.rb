@@ -42,6 +42,41 @@ def seed_ballard
   Location.create!(neighborhood_id: 1, address: "1770 NW 58th St, Seattle, WA")
   Location.create!(neighborhood_id: 1, address: "2853 NW 57th St, Seattle, WA")
   Location.create!(neighborhood_id: 1, address: "5603 28th Ave NW, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2011 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2034 NW 61st St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2009 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2829 NW 59th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "1770 NW 58th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2853 NW 57th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "5603 28th Ave NW, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2011 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2034 NW 61st St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2009 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2829 NW 59th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "1770 NW 58th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2853 NW 57th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "5603 28th Ave NW, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2011 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2034 NW 61st St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2009 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2829 NW 59th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "1770 NW 58th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2853 NW 57th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "5603 28th Ave NW, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2011 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2034 NW 61st St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2009 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2829 NW 59th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "1770 NW 58th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2853 NW 57th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "5603 28th Ave NW, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2011 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2034 NW 61st St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2009 NW 64th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2829 NW 59th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "1770 NW 58th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "2853 NW 57th St, Seattle, WA")
+  Location.create!(neighborhood_id: 1, address: "5603 28th Ave NW, Seattle, WA")
   Location.create!(neighborhood_id: 1, address: "2643 NW 56th St, Seattle, WA")
   Location.create!(neighborhood_id: 1, address: "2227 NW 60th St, Seattle, WA")
   Location.create!(neighborhood_id: 1, address: "2410 NW 58th St, Seattle, WA")
@@ -74,6 +109,26 @@ end
 # #West Seattle Locations
 def seed_west_seattle
   puts "Seeding West Seattle"
+  Location.create!(neighborhood_id: 2, address: "4563 40th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4016 45th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3318 30th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3619 50th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4563 40th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4016 45th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3318 30th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3619 50th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4563 40th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4016 45th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3318 30th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3619 50th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4563 40th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4016 45th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3318 30th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3619 50th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4563 40th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "4016 45th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3318 30th Ave SW, Seattle, WA")
+  Location.create!(neighborhood_id: 2, address: "3619 50th Ave SW, Seattle, WA")
   Location.create!(neighborhood_id: 2, address: "4563 40th Ave SW, Seattle, WA")
   Location.create!(neighborhood_id: 2, address: "4016 45th Ave SW, Seattle, WA")
   Location.create!(neighborhood_id: 2, address: "3318 30th Ave SW, Seattle, WA")
@@ -120,6 +175,26 @@ def seed_downtown
   Location.create!(neighborhood_id: 3, address: "1415 2nd Ave, Seattle, WA")
   Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
   Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1425 Western Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1415 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1425 Western Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1415 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1425 Western Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1415 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1425 Western Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1415 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1425 Western Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "1415 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
+  Location.create!(neighborhood_id: 3, address: "2033 2nd Ave, Seattle, WA")
   Location.create!(neighborhood_id: 3, address: "1119 1st Ave, Seattle, WA")
   Location.create!(neighborhood_id: 3, address: "1500 4th Ave, Seattle, WA")
   Location.create!(neighborhood_id: 3, address: "2000 1st Ave, Seattle, WA")
@@ -155,6 +230,26 @@ end
 # #Capitol Hill Locations
 def seed_cap_hill
   puts "Seeding Capitol Hill"
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
+  Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
   Location.create!(neighborhood_id: 4, address: "200 17th Ave E, Seattle, WA")
   Location.create!(neighborhood_id: 4, address: "516 E Thomas St, Seattle, WA")
   Location.create!(neighborhood_id: 4, address: "1709 18th Ave, Seattle, WA")
@@ -213,6 +308,16 @@ end
 #Queen Anne Locations
 def seed_queen_anne
   puts "Seeding Queen Anne"
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
+  Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
   Location.create!(neighborhood_id: 5, address: "204 Garfield St, Seattle, WA")
   Location.create!(neighborhood_id: 5, address: "500 W Olympic Pl, Seattle, WA")
   Location.create!(neighborhood_id: 5, address: "217 W Prospect St, Seattle, WA")
@@ -320,6 +425,16 @@ end
 def seed_ud
   puts "Seeding University District Locations"
   Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
+  Location.create!(neighborhood_id: 7, address: "5114 24th Ave NE, Seattle, WA")
   Location.create!(neighborhood_id: 7, address: "5108 24th Ave NE, Seattle, WA")
   Location.create!(neighborhood_id: 7, address: "844 NE 59th St, Seattle, WA")
   Location.create!(neighborhood_id: 7, address: "5110 24th Ave NE, Seattle, WA")
@@ -403,6 +518,16 @@ end
 
 def seed_wallingford
   puts "Seeding Wallinford Locations"
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
+  Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
   Location.create!(neighborhood_id: 8, address: "323 NE 55th St, Seattle, WA")
   Location.create!(neighborhood_id: 8, address: "3811 Corliss Ave N, Seattle, WA")
   Location.create!(neighborhood_id: 8, address: "4912 Stone Ave N, Seattle, WA")
@@ -532,11 +657,17 @@ end
 #seed reports
 def seed_reports
   puts "Seeding Reports"
-  100.times do 
+  
+  Location.all.each do |location|
     puts "Creating Report"
-    Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, location_id: Location.all.sample.id)
+    Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, location_id: location.id)
     puts "Successfully Created Report"
   end
+  # 100.times do 
+  #   puts "Creating Report"
+  #   Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, location_id: Location.all.sample.id)
+  #   puts "Successfully Created Report"
+  # end
 end
 
 def seed_raccoon_parties
@@ -551,6 +682,6 @@ end
 seed_neighborhoods
 seed_users
 seed_raccoons
-seed_lake_city
+seed_locations
 seed_reports
 seed_raccoon_parties
