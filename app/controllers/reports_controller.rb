@@ -1,6 +1,7 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:edit, :update, :show]
   before_action :current_user
+  before_action :require_login, only: [:new, :create]
 
   def index
     @reports = Report.all
@@ -15,7 +16,6 @@ class ReportsController < ApplicationController
     @report = Report.new(report_params)
     @report.user_id = @current_user.id
     @report.save
-  
     redirect_to @report
   end 
 
