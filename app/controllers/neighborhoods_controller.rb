@@ -1,4 +1,5 @@
 class NeighborhoodsController < ApplicationController
+  before_action :require_login
 def index
   @neighborhoods = Neighborhood.all
 end

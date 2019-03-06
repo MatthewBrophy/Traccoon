@@ -1,7 +1,6 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:edit, :update, :show]
-  before_action :current_user
-  before_action :require_login, only: [:new, :create]
+  before_action :require_login
 
   def index
     @reports = Report.all

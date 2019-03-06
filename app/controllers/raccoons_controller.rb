@@ -1,4 +1,5 @@
 class RaccoonsController < ApplicationController
+  before_action :require_login
   def index
     @raccoons = Raccoon.all
   end

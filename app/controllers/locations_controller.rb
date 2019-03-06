@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
      before_action :set_location, only: [:edit, :update, :show]
-     
+     before_action :require_login
      def index 
       @locations = Location.all
      end

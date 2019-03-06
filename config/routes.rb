@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :locations
   resources :users
   resources :sessions
+  get '/login', to: 'sessions#new'
   resource :welcome, only: :show
   resources :raccoons do 
     resources :comments
