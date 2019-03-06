@@ -13,13 +13,7 @@ def create
     redirect_to new_session_path
   end
 end
-#if user 
-  #session[:user_id] = @user.id
-  #redirect_to welcome_path
-#else
-#flash[:message] = "invalid username or passwod" 
-#redirect to sessions_new
-#end 
+
 
 def destroy
   session.delete :user_id #session.clear will delete all things in it ex:cart or whatever

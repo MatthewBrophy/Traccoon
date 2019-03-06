@@ -5,6 +5,7 @@ class RaccoonsController < ApplicationController
 
   def show 
     @raccoon = Raccoon.find(params[:id])
+    @comment = Comment.new
   end
 
   def new

@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   resources :comments
   resources :neighborhoods
   resources :locations
-  resources :raccoons
   resources :users
   resources :sessions
   resource :welcome, only: :show
+  resources :raccoons do 
+    resources :comments
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

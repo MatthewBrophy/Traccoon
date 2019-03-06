@@ -8,4 +8,24 @@
 <%= image_tag (@raccoon.picture)%>
 
 
+<%= form_for ([@raccoon, @comment]) do |f| %>
+  <%= f.label :comment_title, "Comment Title" %>
+  <%= f.text_field :comment_title %>
+
+  <%= f.label :comment_text, "Comment" %>
+  <%= f.text_area :comment_text %>
+
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% @raccoon.comments.each do |comment| %>
+  <div><p>Title: <%= comment.comment_title %></p>
+  <p>Comment: <%= comment.comment_text %></p></div>
+  <%= link_to  "Delete Comment", raccoon_comment_path(@raccoon, comment), method: :delete %>
+  <% end %>
+
+</ul>
+
+
 </ul>
