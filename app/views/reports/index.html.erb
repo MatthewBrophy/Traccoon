@@ -4,6 +4,7 @@
 <h3>Report # <%= report.id %></h3>
 <b>Report Date: <%= report.report_date %></b><br>
 <b>Neighborhood:</b> <%= report.neigh_name %> | <b>Address:</b> <%= report.address %><br>
+<b>User Reported: <%= report.user.name %></b><br>
 <b>Raccoons involved in the incident:</b>
   <% report.raccoons.each do |raccoon| %>
    | <%= raccoon.name %> |

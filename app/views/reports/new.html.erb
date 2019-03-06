@@ -1,9 +1,6 @@
 <h1>This is a new Raccoon sighting report!</h1>
 
 <%= form_for @report do |f| %>
-<!--hidden user field pre-set by session ID-->
-<%= f.label :user_id, "Select a User" %>
-<%= f.collection_select :user_id, User.all, :id, :name %><br><br>
 
 <%= f.label :time, "Date" %>
 <%= f.date_field :time %><br><br>
