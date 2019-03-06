@@ -18,7 +18,7 @@ def seed_users
   puts "Seeding Users"
   20.times do 
     puts "Creating User"
-    User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: "password", neighborhood: Neighborhood.all.sample.id)
+    User.create!(name: Faker::Name.name, email: Faker::Internet.email, password: "password", neighborhood_id: Neighborhood.all.sample.id)
     puts "Successfully Created User"
   end
 end
@@ -683,6 +683,6 @@ end
 seed_neighborhoods
 seed_users
 seed_raccoons
-seed_locations
+seed_lake_city
 seed_reports
 seed_raccoon_parties

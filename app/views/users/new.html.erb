@@ -7,7 +7,7 @@
 <%= f.text_field :name %>
 
 <%= f.label :neighborhood, "Select Your Neighborhood: " %>
-<%= f.collection_select(:neighborhood_ids, Neighborhood.all, :id, :name) %>
+<%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
 
 <%= f.label :email, "Email" %>
 <%= f.text_field :email %>
