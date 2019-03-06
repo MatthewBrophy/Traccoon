@@ -1,3 +1,4 @@
+require 'pry'
 class Report < ApplicationRecord
   belongs_to :user
   has_one :neighborhood, through: :location
@@ -16,6 +17,15 @@ class Report < ApplicationRecord
 
   def address
     self.location.address
+  end
+
+  def gmaps_address
+    address = self.address
+    breakdown = address.split(",")
+    number_and_street = breakdown[0].gsub(" ","+")
+    breakdown.shift
+    city_and_state = breakdown.map {|i| i.strip}.join("+")
+    "#{number_and_street},#{city_and_state}"
   end
 end
 

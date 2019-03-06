@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_170749) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.string "neighborhood"
+    t.integer "neighborhood_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

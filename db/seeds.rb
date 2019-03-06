@@ -673,17 +673,16 @@ end
 
 def seed_raccoon_parties
   puts "Seeding Raccoon Parties"
-  200.times do 
+  558.times do 
     puts "Raccoon Party!!!!!!"
     RaccoonParty.create(raccoon_id: Raccoon.all.sample.id, report_id: Report.all.sample.id)
   end
   puts "Raccoon Parties have ended :(..."
 end
 
-seed_neighborhoods
-seed_users
-seed_raccoons
-seed_lake_city
-seed_queen_anne
-seed_reports
+# seed_neighborhoods
+# seed_users
+# seed_raccoons
+# seed_locations
+# seed_reports
 seed_raccoon_parties

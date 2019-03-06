@@ -1,12 +1,13 @@
 
-<h3>Name: <%= @raccoon.name %></h3>
-<ul>
-<li>Size: <%= @raccoon.size %></li>
-<li>Favorite Food: <%= @raccoon.favorite_food %></li>
-<li>Gender: <%= @raccoon.gender %></li>
-<li>Disposition: <%= @raccoon.disposition %></li>
-<%= image_tag (@raccoon.picture)%>
+<h2><%= @raccoon.name %></h2>
 
+<b>Favorite Food:</b> <%= @raccoon.favorite_food %><br>
+<b>Disposition:</b> <%= @raccoon.disposition %><br>
+<b>Size:</b> <%= @raccoon.size %><br>
+<b>Gender:</b> <%= @raccoon.gender %><br>
+<%= form_for @raccoon do |f| %>
+  <b>Seen At:</b> <%= f.collection_select :location_ids, @raccoon.locations.all, :id, :address %>
+<% end %>
 
 <%= form_for ([@raccoon, @comment]) do |f| %>
   <%= f.label :comment_title, "Comment Title" %>
@@ -24,8 +25,6 @@
   <p>Comment: <%= comment.comment_text %></p></div>
   <%= link_to  "Delete Comment", raccoon_comment_path(@raccoon, comment), method: :delete %>
   <% end %>
-
 </ul>
 
-
-</ul>
+<%= image_tag (@raccoon.picture)%><br>

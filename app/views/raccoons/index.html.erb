@@ -1,4 +1,5 @@
 <h3>Raccoons: </h3>
 <% @raccoons.each do |raccoon|  %>
 <li><%= link_to  raccoon.name, raccoon_path(raccoon) %></li>
+<%= image_tag raccoon.picture%><br>
 <% end %>
