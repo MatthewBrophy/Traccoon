@@ -2,13 +2,15 @@
 
 <%= form_for @report do |f| %>
 
-<%= f.label :time, "Date" %>
+<b><%= f.label :time, "Date" %></b>
 <%= f.date_field :time %><br><br>
   
 <%= f.fields_for :raccoons, @report.raccoons.build do |raccoons_fields| %>
-  <%= f.label :name, "Select a Raccoon!" %>  
+  <b><%= f.label :name, "Select a Raccoon!" %></b>
   <%= f.collection_check_boxes :raccoon_ids, Raccoon.all, :id, :name %>   
 <% end %><br><br>
+<b>Don't see the Raccoon want to report?</b>
+<%= link_to  "Register a New Raccoon...", new_raccoon_path %><br><br>
 
 <%= f.fields_for :location do |location_fields| %>
   <%= location_fields.label :neighborhood_id, "Select a Neighborhood" %>

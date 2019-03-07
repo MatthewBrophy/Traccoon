@@ -1,0 +1,18 @@
+<h1>Register a new Raccoon...<h2>
+<%= form_for @raccoon do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :color, "Color" %>
+  <%= f.text_field :color %>
+  <%= f.label :size, "Size" %>
+  <%= f.select(:size, @raccoon.sizes)%>
+  <%= f.label :gender, "Gender" %>
+  <%= f.select(:gender, @raccoon.genders) %> 
+  <%= f.label :favorite_food, "Favorite Food" %>
+  <%= f.text_field :favorite_food %>
+  <%= f.label :disposition, "Disposition" %>
+  <%= f.select(:disposition, @raccoon.dispositions) %>
+  <%= f.hidden_field :picture %>
+  
+  <%= f.submit %>
+<% end %>
