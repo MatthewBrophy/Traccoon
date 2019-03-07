@@ -1,5 +1,17 @@
 <h3>Raccoons: </h3>
-<% @raccoons.each do |raccoon|  %>
-<li><%= link_to  raccoon.name, raccoon_path(raccoon) %></li>
-<%= image_tag raccoon.picture%><br>
-<% end %>
+
+
+<div class="card-columns">
+  <% @raccoons.each do |raccoon|  %>  
+  <div class="card">
+    <%= image_tag(raccoon.picture, class: 'card-img-top') %>
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+  <% end %>  
+</div>
+
+
+<%= image_tag("raccoon.png", height: 50, class: 'image') %>
