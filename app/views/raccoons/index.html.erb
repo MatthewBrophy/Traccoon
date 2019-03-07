@@ -3,11 +3,15 @@
 
 <div class="card-columns">
   <% @raccoons.each do |raccoon|  %>  
-  <div class="card">
-    <%= image_tag(raccoon.picture, class: 'card-img-top') %>
+  <div class="card img-thumbnail">
+    <%= link_to image_tag(raccoon.picture, class: 'card-img-top'), raccoon %>
     <div class="card-body">
-      <h5 class="card-title"><%= raccoon.name %></h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title"><%= link_to  raccoon.name, raccoon %></h5>
+      <p class="card-text">
+        <b>Favorite Food:</b> <%= raccoon.favorite_food %><br>
+        <b>Known for being</b> <%= raccoon.disposition %><br>
+        <%= link_to  "See All Sightings", track_raccoon_url(raccoon) %>
+      </p>
     </div>
   </div>
   <% end %>  

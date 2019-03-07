@@ -24,13 +24,13 @@ def seed_users
 end
 
 def seed_raccoons
-  raccoon_pictures = ["raccoon1.jpg", "raccoon2.jpg", "raccoon3.jpg", "raccoon4.jpg", "raccoon5.jpg", "raccoon6.jpg", "raccoon7.jpg", "raccoon8.jpg", "raccoon9.jpg", "raccoon10.jpg", "raccoon11.jpg", "raccoon12.jpg", "raccoon13.jpg", "raccoon14.jpg", "raccoon15.jpg", "raccoon16.jpg", "raccoon17.jpg", "raccoon18.jpg", "raccoon19.jpg", "raccoon20.jpg", "raccoon21.jpg", "raccoon22.jpg", "raccoon23.jpg", "raccoon24.jpg", "raccoon25.jpg", "raccoon26.jpg", "raccoon27.jpg", "raccoon28.jpg", "raccoon29.jpg", "raccoon30.jpg", "raccoon31.jpg"]
+  raccoon_pictures = ["raccoon1.jpg", "raccoon2.jpg", "raccoon3.jpg", "raccoon4.jpg", "raccoon5.jpg", "raccoon6.jpg", "raccoon7.jpg", "raccoon8.jpg", "raccoon9.jpg", "raccoon10.jpg", "raccoon11.jpg", "raccoon12.jpg", "raccoon13.jpg", "raccoon14.jpg", "raccoon15.jpg", "raccoon16.jpg", "raccoon17.jpg", "raccoon18.jpg", "raccoon19.jpg", "raccoon20.jpg", "raccoon21.jpg", "raccoon22.jpg", "raccoon23.jpg", "raccoon24.jpg", "raccoon25.jpg", "raccoon26.jpg", "raccoon27.jpg", "raccoon28.jpg", "raccoon29.jpg", "raccoon30.jpg", "raccoon31.jpg", "raccoon32.jpg", "raccoon33.jpg", "raccoon34.jpg", "raccoon35.jpg", "raccoon36.jpg", "raccoon37.jpg", "raccoon38.jpg", "raccoon39.jpg", "raccoon40.jpg", "raccoon41.jpg", "raccoon42.jpg", "raccoon43.jpg", "raccoon44.jpg", "raccoon45.jpg", "raccoon46.jpg", "raccoon47.jpg", "raccoon48.jpg", "raccoon49.jpg", "raccoon50.jpg", "raccoon51.jpg" ]
   puts "Seeding Raccoons"
-  50.times do
+  (1..51).each { |val|
     puts "Creating Raccoon"
-    Raccoon.create!(name: Faker::Name.first_name, color: ["Brown", "Black", "Tan", "Grey", "White", "Red"].sample, size: ["small", "medium", "large", "massive"].sample, gender: Faker::Gender.binary_type, favorite_food: Faker::Food.dish, disposition: ["friendly", "shy", "aggressive", "loving", "defensive"].sample, user_id: User.all.sample.id, picture: raccoon_pictures.sample)
+    Raccoon.create!(name: Faker::Name.first_name, color: ["Brown", "Black", "Tan", "Grey", "White", "Red"].sample, size: ["small", "medium", "large", "massive"].sample, gender: Faker::Gender.binary_type, favorite_food: Faker::Food.dish, disposition: ["friendly", "shy", "aggressive", "loving", "defensive"].sample, user_id: User.all.sample.id, picture: raccoon_pictures[val-1])
     puts "Successfully Created Raccoon"
-  end
+  }
 end
 
 #Ballard Locations
@@ -672,16 +672,16 @@ end
 
 def seed_raccoon_parties
   puts "Seeding Raccoon Parties"
-  Report.all.each do |report|
+  2000.times do 
     puts "Raccoon Party!!!!!!"
     RaccoonParty.create(raccoon_id: Raccoon.all.sample.id, report_id: Report.all.sample.id)
   end
   puts "Raccoon Parties have ended :(..."
 end
 
-# seed_neighborhoods
-# seed_users
-# seed_raccoons
-# seed_locations
-# seed_reports
+seed_neighborhoods
+seed_users
+seed_raccoons
+seed_locations
+seed_reports
 seed_raccoon_parties

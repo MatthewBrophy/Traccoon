@@ -1,16 +1,52 @@
-<h1>Where has <%= @raccoon.name %> <b>been lately...</h1>
-<%= image_tag(@raccoon.picture, size:"640x400") %><br>
-<% @raccoon.gmaps_sightings.each do |address| %>
-<!-- <iframe
-width="600"
-height="450"
-frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?key=<%=ENV["API_KEY"]%>
-  &q=<%=address%>" allowfullscreen>
-</iframe> -->
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col">    
+    </div>
+    <div class="col-6">    
+      <h1 class="text-center">Where has <%= @raccoon.name %> been lately...</h1>
+      <%= image_tag(@raccoon.picture, size:"640x400", class: 'img-thumbnail') %>
+    </div>
+    <div class="col">    
+    </div>
+  </div>
 
-Did you see <%= @raccoon.name %> recently? <%= link_to  "Create a sighting report", new_report_path %>
+<br>
+
+<div class="card-columns">
+    <% @raccoon.gmaps_sightings.each do |address|  %>  
+    <div class="card img-thumbnail">
+        <iframe
+        src="https://www.google.com/maps/embed/v1/place?key=&q=<%=address%>" allowfullscreen>
+        </iframe>
+      <div class="card-body">
+        
+        <p class="card-text text-center"><%= address %>
+          
+        </p>
+      </div>
+    </div>
+    <% end %>  
+  </div>
+
+
+
+<!-- <div class="row">
+    <div class="col">    
+    </div>
+    <div class="col-8">    
+      <% @raccoon.gmaps_sightings.each do |address| %>
+      <iframe
+      src="https://www.google.com/maps/embed/v1/place?key=&q=<%=address%>" allowfullscreen>
+      </iframe>
+      <% end %>
+    </div>
+    <div class="col">    
+    </div>
+  </div> -->
+
+
+<h3>Have you seen <%= @raccoon.name %> recently? <%= link_to  "Create a sighting report", new_report_path %></h3>
+</div>
 
 
 
