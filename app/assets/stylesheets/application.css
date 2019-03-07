@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+/* login column width */
+ .login-column {
+  max-width: 450px; 
+ }

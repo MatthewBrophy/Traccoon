@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+# add before action skip and take away require login from all apges
 def new 
 end 
 
