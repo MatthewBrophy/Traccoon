@@ -1,14 +1,28 @@
-
-<h2><%= @raccoon.name %></h2>
-<%= image_tag (@raccoon.picture), class: "img-thumbnail"%><br>
-<b>Favorite Food:</b> <%= @raccoon.favorite_food %><br>
-<b>Disposition:</b> <%= @raccoon.disposition %><br>
-<b>Size:</b> <%= @raccoon.size %><br>
-<b>Gender:</b> <%= @raccoon.gender %><br>
-
 <div class="container">
   <div class="row">
     <div class="col-sm">
+    
+    </div>
+    <%= image_tag (@raccoon.picture), class: "img-thumbnail"%><br>
+    <div class="col-sm">
+    <h2><%= @raccoon.name %></h2>
+    
+    <b>Favorite Food:</b> <%= @raccoon.favorite_food %><br>
+    <b>Disposition:</b> <%= @raccoon.disposition %><br>
+    <b>Size:</b> <%= @raccoon.size %><br>
+    <b>Gender:</b> <%= @raccoon.gender %><br>
+    </div>
+    <div class="col-sm">
+    </div>
+</div>
+  <div class="spacing-raccoon-show">
+    
+  </div>
+
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-6">
       <%= bootstrap_form_for @raccoon do |f| %>
       <b>Seen At:</b> <%= f.collection_select :location_ids, @raccoon.locations.all, :id, :address %>
       <% end %>
@@ -23,7 +37,7 @@
       <%= f.submit %>
       <% end %>
     </div>
-    <div class="col-sm">
+    <div class="col">
       </div>
   </div> 
 </div>

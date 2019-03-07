@@ -8,9 +8,8 @@
   <div class="row">
     <div class="col-sm">
     </div>
-    <div class="col-md">
-      <div class="card shadow-lg">
-      <div class="card-body">
+    <div class="col-sm">
+   
         <h5>Create an Account with us!</h5>
         <%= bootstrap_form_for @user, html: {class: "form group"} do|f| %>
         <%= f.text_field :name, placeholder: 'Name' %>
@@ -23,9 +22,7 @@
         <%= f.submit 'Submit', class: "btn btn-primary" %>
         <% end %>
     </div>
-    </div>
-  </div>
-    <div class="col-md">
+    <div class="col-sm">
     </div>
   </div>
 </div>
