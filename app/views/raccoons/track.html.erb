@@ -11,41 +11,22 @@
   </div>
 
 <br>
+<h3 class="text-center">Have you seen <%= @raccoon.name %> recently? <%= link_to  "Create a sighting report", new_report_path %></h3>
+<br>
 
 <div class="card-columns">
-    <% @raccoon.gmaps_sightings.each do |address|  %>  
-    <div class="card img-thumbnail">
-        <iframe
-        src="https://www.google.com/maps/embed/v1/place?key=&q=<%=address%>" allowfullscreen>
-        </iframe>
-      <div class="card-body">
-        
-        <p class="card-text text-center"><%= address %>
-          
-        </p>
-      </div>
+  <% @raccoon.gmaps_sightings.each do |address|  %>  
+  <div class="card img-thumbnail">
+    <iframe class="track-iframe"
+    src="https://www.google.com/maps/embed/v1/place?key=&q=<%=address%>" allowfullscreen>
+    </iframe>
+    <div class="card-body">
+      <p class="card-text text-center"><%= address %></p>
     </div>
-    <% end %>  
   </div>
+<% end %>  
+</div>
 
-
-
-<!-- <div class="row">
-    <div class="col">    
-    </div>
-    <div class="col-8">    
-      <% @raccoon.gmaps_sightings.each do |address| %>
-      <iframe
-      src="https://www.google.com/maps/embed/v1/place?key=&q=<%=address%>" allowfullscreen>
-      </iframe>
-      <% end %>
-    </div>
-    <div class="col">    
-    </div>
-  </div> -->
-
-
-<h3>Have you seen <%= @raccoon.name %> recently? <%= link_to  "Create a sighting report", new_report_path %></h3>
 </div>
 
 

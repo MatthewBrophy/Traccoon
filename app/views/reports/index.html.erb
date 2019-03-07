@@ -1,20 +1,10 @@
-<h1>This is a collection of all filed reports.</h1>
+<h1 class="">This is a collection of all filed reports.</h1>
 
-<!-- <% @reports.each do |report| %>
-<h3>Report # <%= report.id %></h3>
-<b>Report Date: <%= report.report_date %></b><br>
-<b>Neighborhood:</b> <%= report.neighborhood_name %> | <b>Address:</b> <%= report.address %><br>
-<b>User Reported: <%= report.user.name %></b><br>
-<b>Raccoons involved in the incident:</b>
-  <% report.raccoons.each do |raccoon| %>
-   | <%= link_to  raccoon.name, raccoon %> |
-  <% end %>
-<% end %> -->
+
 <h1>Queen Anne</h1>
 <% @reports.by_neighborhood("Queen Anne").each do |report| %>
-<h3>Report # <%= report.id %></h3>
-<b>Report Date: <%= report.report_date %></b><br>
-<b>Neighborhood:</b> <%= report.neighborhood_name %> | <b>Address:</b> <%= report.address %><br>
+<h3><%= link_to  "Report #:#{report.id}", report %></h3>
+<b>Report Date:<b><%= report.report_date %> | <b>Address:</b> <%= report.address %><br>
 <b>User Reported: <%= report.user.name %></b><br>
 <b>Raccoons involved in the incident:</b>
   <% report.raccoons.each do |raccoon| %>

@@ -1,21 +1,37 @@
-<h1>Hey look a report</h1>
-
-<%= @report.report_date %><br>
-<%= link_to  @report.neighborhood_name, @report.location.neighborhood %>
-<% @report.raccoons.each do |raccoon| %>
-  <ul>
-    <li><%= link_to  raccoon.name, raccoon %></li>
-  </ul>
-<% end %>
-
-
-  <!-- <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=<%=ENV["API_KEY"]%>
+<br>
+<br>
+<br>
+<br>
+<h1>Report #<%= @report.id %></h1>
+<h2>Location:</h2>
+  <iframe
+    src="https://www.google.com/maps/embed/v1/place?key=<%=ENV["API_KEY"]%>
     &q=<%=@report.gmaps_address%>" allowfullscreen>
-</iframe> -->
+  </iframe>
+
+<h2>Reported:<%= @report.report_date %></h2>
+<h2>Neighborhood: <%= link_to  @report.neighborhood_name, @report.location.neighborhood %></h2>
+
+<h2>Raccoons Involved:</h2>
+<div class="card-deck">
+    <% @report.raccoons.each do |raccoon|  %>  
+    <div class="card img-thumbnail">
+      <%= link_to image_tag(raccoon.picture, class: 'card-img-top'), raccoon %>
+      <div class="card-body">
+        <h5 class="card-title text-center"><%= link_to  raccoon.name, raccoon %></h5>
+        <p class="card-text text-center">
+          <%= link_to  "See All Sightings", track_raccoon_url(raccoon) %>
+        </p>
+      </div>
+    </div>
+    <% end %>  
+  </div>
+
+
+
+
+
+
 
 
 

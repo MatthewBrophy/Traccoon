@@ -41,11 +41,12 @@
   height: 150px;
 }
 
-iframe {
+.track-iframe {
   display: block;
   margin: 0 auto;
   border: 0;
 }
+
 .nav-bar-title {
   
   font-family: 'Permanent Marker', cursive;
