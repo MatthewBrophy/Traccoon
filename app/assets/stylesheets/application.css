@@ -39,3 +39,8 @@ iframe {
   margin: 0 auto;
   border: 0;
 }
+.nav-bar-title {
+  
+  font-family: 'Permanent Marker', cursive;
+  color: #6F7F74
+}
