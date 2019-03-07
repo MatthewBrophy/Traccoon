@@ -1,8 +1,9 @@
 <% if flash[:message] %>
 <p><%= flash[:message] %></p>
 <% end %>
-<%= form_for @user do |f| %>
-
+<div class=" ui fluid container">
+<div class="row">
+<%= form_for @user, html: {class: "ui form"} do|f| %>
 <%= f.label :name, "Name" %>
 <%= f.text_field :name %>
 
@@ -20,3 +21,6 @@
 
 <%= f.submit %>
 <% end %>
+
+</div>
+</div>
