@@ -3,27 +3,29 @@
 <% end %>
 
 
-<h2>User Create Form</h2>
-<%= form_for @user, html: {class: "ui form"} do|f| %>
-<div class="field">
-<%= f.text_field :name, placeholder: 'Name' %>
-</div>
-<div class="field">
-<%= f.label :neighborhood, "Select Your Neighborhood: " %>
-<%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
-</div>
-<div class="field">
-<%= f.text_field :email, placeholder: 'Email' %>
-</div>
 
-<div class="field">
-<%= f.text_field :password, placeholder: 'Password' %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-md">
+      <div class="card shadow-lg">
+      <div class="card-body">
+        <h5>Create an Account with us!</h5>
+        <%= bootstrap_form_for @user, html: {class: "form group"} do|f| %>
+        <%= f.text_field :name, placeholder: 'Name' %>
+        <%= f.label :neighborhood, "Select Your Neighborhood: " %>
+        <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
+        <%= f.text_field :email, placeholder: 'Email', class: "form_control"  %>
+        <%= f.text_field :password, placeholder: 'Password', class: "form_control"  %>
+        <%= f.text_field :password_confirmation, placeholder: 'Password Confirmation', class: "form_control"  %>
+      
+        <%= f.submit 'Submit', class: "btn btn-primary" %>
+        <% end %>
+    </div>
+    </div>
+  </div>
+    <div class="col-md">
+    </div>
+  </div>
 </div>
-<div class="field">
-
-<%= f.text_field :password_confirmation, placeholder: 'Password Confirmation' %>
-</div>
-<%= f.submit 'Submit', class: "ui teal submit button" %>
-<% end %>
-
-

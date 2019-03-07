@@ -1,9 +1,15 @@
-<h2>Welcome to Traccoon!</h2>
+<div class="container">
+ <div class="row">
+   
+    <h2>Welcome to Traccoon!</h2>
+    <h3>Hi <%= @current_user.name.capitalize %>!</h3>
+  </div>
+</div>
 
-<h3>Hi <%= @current_user.name.capitalize %>!</h3>
 
-<%= link_to  "My profile", user_path(@current_user) %> <br>
+
+<!-- <%= link_to  "My profile", user_path(@current_user) %> <br>
 <%= link_to  "See all Raccoons", raccoons_path %><br>
 <%= link_to  "Report a Raccoon", new_report_path %><br>
 <%= link_to 'Logout', session_path(@current_user), method: :delete %><br>
-<%= link_to  "See all Reports", reports_path %>
+<%= link_to  "See all Reports", reports_path %> -->

@@ -1,23 +1,33 @@
 
 <h2><%= @raccoon.name %></h2>
-
+<%= image_tag (@raccoon.picture), class: "img-thumbnail"%><br>
 <b>Favorite Food:</b> <%= @raccoon.favorite_food %><br>
 <b>Disposition:</b> <%= @raccoon.disposition %><br>
 <b>Size:</b> <%= @raccoon.size %><br>
 <b>Gender:</b> <%= @raccoon.gender %><br>
-<%= form_for @raccoon do |f| %>
-  <b>Seen At:</b> <%= f.collection_select :location_ids, @raccoon.locations.all, :id, :address %>
-<% end %>
 
-<%= form_for ([@raccoon, @comment]) do |f| %>
-  <%= f.label :comment_title, "Comment Title" %>
-  <%= f.text_field :comment_title %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <%= bootstrap_form_for @raccoon do |f| %>
+      <b>Seen At:</b> <%= f.collection_select :location_ids, @raccoon.locations.all, :id, :address %>
+      <% end %>
 
-  <%= f.label :comment_text, "Comment" %>
-  <%= f.text_area :comment_text %>
+      <%= bootstrap_form_for ([@raccoon, @comment]) do |f| %>
+      <%= f.label :comment_title, "Comment Title" %>
+      <%= f.text_field :comment_title %>
 
-  <%= f.submit %>
-<% end %>
+      <%= f.label :comment_text, "Comment" %>
+      <%= f.text_area :comment_text %>
+
+      <%= f.submit %>
+      <% end %>
+    </div>
+    <div class="col-sm">
+      </div>
+  </div> 
+</div>
+
 
 <ul>
   <% @raccoon.comments.each do |comment| %>
@@ -26,4 +36,3 @@
   <% end %>
 </ul>
 
-<%= image_tag (@raccoon.picture)%><br>

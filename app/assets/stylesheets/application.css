@@ -17,3 +17,8 @@
  .login-column {
   max-width: 450px; 
  }
+
+ .img-thumbnail {
+   height: 200px;
+
+ }
