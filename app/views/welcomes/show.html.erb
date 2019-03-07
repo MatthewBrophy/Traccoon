@@ -1,10 +1,46 @@
 <div class="container">
- <div class="row">
-   
-    <h2>Welcome to Traccoon!</h2>
-    <h3>Hi <%= @current_user.name.capitalize %>!</h3>
+  <div class="row">
+    <div class="col-sm">
+<h2>Welcome to Traccoon!</h2>
+<%= link_to  "Seen an Raccoons latley? Report it here!", new_report_path %>
+    </div>
+  </div>
+
+
+  <div class="spacing">
+
+  </div>
+  <div class="row">
+    <div class="col-sm">
+<h3>Random Raccoon Facts</h3>
+<p>
+<h6>Activity:</h6> Nocturnal in nature, raccoons are mostly active at nighttime. They are most active in spring, summer and fall,
+and will sleep in their dens for most of the winter.</P>
+
+<p>
+  <h6>Reproduction:</h6> Reproduction begins in late winter. Females, or sows, usually give birth to 1-6 baby kits in April or May.
+Mothers are very protective of their young until they separate after about a year.</p>
+
+<p>
+  <h6>Social Interaction:</h6> Raccoons are independent after 12-14 months of age. Adults live in loose knit communities of 4 - 5
+raccoons for better protection against predators.
+</p>
+
+<p>
+  <h6>Communication:</h6> Raccoons communicate with each other using over 200 different sounds and 12-15 different calls.</p>
+
+<p>
+  <h6>Skills:</h6> Raccoons possess amazing dexterity that gives them the ability to open doors, jars, bottles and latches. They
+are also great climbers, which allows them to better access food and shelter.
+</p>
+
+    </div>
   </div>
 </div>
+
+
+
+
 
 
 
