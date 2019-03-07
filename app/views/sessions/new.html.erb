@@ -9,8 +9,8 @@
     <div class="col-sm">
     </div>
     <div class= "col-sm">
-      <h2>Login Here</h2>
-    <%= image_tag("raccoon.png", height: 50, class: 'image') %>
+      
+    
     <%= bootstrap_form_for :user, url: sessions_path, html: {class: "form group"} do |f| %>
     <%= f.text_field :email, placeholder: 'Email', class: "form_control" %>
     <%= f.text_field :password, placeholder: 'Password', class: "form_control" %>
