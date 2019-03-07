@@ -3,14 +3,11 @@
 <p><%= flash[:message] %></p>
 <% end %>
 
-
-
-
 <%= form_for :user, url: sessions_path do |f| %>
 <div class="ui middle aligned center aligned grid">
   <div class="column">
     <h2 class="ui teal image header">
-      <%= image_tag("raccoon.png", height: 50) %>
+      <%= image_tag("raccoon.png", height: 50, class: 'image') %>
       <div class="content">
         Log-in to your account
       </div>
@@ -29,7 +26,7 @@
             <%= f.text_field :password, placeholder: 'Password' %>
           </div>
         </div>
-        <div class="ui fluid large teal submit button">Login</div>
+        <%= f.submit "Login", class: "ui teal submit button" %>
       </div>
     </form>
 
@@ -39,3 +36,7 @@
   </div>
 </div>
 <% end %>
+
+
+
+

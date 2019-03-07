@@ -1,24 +1,29 @@
 <% if flash[:message] %>
 <p><%= flash[:message] %></p>
 <% end %>
-<div class="ui  grid">
-<%= form_for @user, html: {class: "ui form"} do|f| %>
-<%= f.label :name, "Name" %>
-<%= f.text_field :name %>
 
+
+<h2>User Create Form</h2>
+<%= form_for @user, html: {class: "ui form"} do|f| %>
+<div class="field">
+<%= f.text_field :name, placeholder: 'Name' %>
+</div>
+<div class="field">
 <%= f.label :neighborhood, "Select Your Neighborhood: " %>
 <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
-
-<%= f.label :email, "Email" %>
-<%= f.text_field :email %>
-
-<%= f.label :password, "Password" %>
-<%= f.text_field :password %>
-
-<%= f.label :password_confirmation, "Password Confirmation" %>
-<%= f.text_field :password_confirmation %>
-
-<%= f.submit %>
-<% end %>
 </div>
+<div class="field">
+<%= f.text_field :email, placeholder: 'Email' %>
+</div>
+
+<div class="field">
+<%= f.text_field :password, placeholder: 'Password' %>
+</div>
+<div class="field">
+
+<%= f.text_field :password_confirmation, placeholder: 'Password Confirmation' %>
+</div>
+<%= f.submit 'Submit', class: "ui teal submit button" %>
+<% end %>
+
 
