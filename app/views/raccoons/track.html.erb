@@ -1,7 +1,17 @@
 <h1>Where has <%= @raccoon.name %> <b>been lately...</h1>
 <%= image_tag(@raccoon.picture, size:"640x400") %><br>
+<% @raccoon.gmaps_sightings.each do |address| %>
+<!-- <iframe
+width="600"
+height="450"
+frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?key=<%=ENV["API_KEY"]%>
+  &q=<%=address%>" allowfullscreen>
+</iframe> -->
+<% end %>
 
-<%byebug%>
+Did you see <%= @raccoon.name %> recently? <%= link_to  "Create a sighting report", new_report_path %>
+
 
 
 

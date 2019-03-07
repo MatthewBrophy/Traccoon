@@ -7,7 +7,8 @@
   
 <%= f.fields_for :raccoons, @report.raccoons.build do |raccoons_fields| %>
   <b><%= f.label :name, "Select a Raccoon!" %></b>
-  <%= f.collection_check_boxes :raccoon_ids, Raccoon.all, :id, :name %>   
+  <%= f.collection_check_boxes :raccoon_ids, Raccoon.all, :id, :name%>   
+  
 <% end %><br><br>
 <b>Don't see the Raccoon want to report?</b>
 <%= link_to  "Register a New Raccoon...", new_raccoon_path %><br><br>
@@ -17,10 +18,8 @@
   <%= location_fields.collection_select :neighborhood_id, Neighborhood.all, :id, :name %><br><br>
   <%= f.label :address, "Enter an address" %>
   <%= location_fields.text_field :address %><br><br>
-  
 <% end %>
 
 <%= f.submit %>
 <% end %>
-
 

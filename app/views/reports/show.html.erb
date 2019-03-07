@@ -1,21 +1,21 @@
 <h1>Hey look a report</h1>
 
-<%= @report.time %><br>
-<%= @report.location.address %>
+<%= @report.report_date %><br>
+<%= link_to  @report.neighborhood_name, @report.location.neighborhood %>
 <% @report.raccoons.each do |raccoon| %>
   <ul>
-    <li><%= raccoon.name %></li>
+    <li><%= link_to  raccoon.name, raccoon %></li>
   </ul>
 <% end %>
 
 
-  <iframe
+  <!-- <iframe
   width="600"
   height="450"
   frameborder="0" style="border:0"
   src="https://www.google.com/maps/embed/v1/place?key=<%=ENV["API_KEY"]%>
     &q=<%=@report.gmaps_address%>" allowfullscreen>
-</iframe>
+</iframe> -->
 
 
 

@@ -305,7 +305,6 @@ def seed_cap_hill
   Location.create!(neighborhood_id: 4, address: "1210 E John St, Seattle, WA")
   puts "Capitol Hill Successfully Seeded"
 end
-
 #Queen Anne Locations
 def seed_queen_anne
   puts "Seeding Queen Anne"
@@ -673,7 +672,7 @@ end
 
 def seed_raccoon_parties
   puts "Seeding Raccoon Parties"
-  558.times do 
+  Report.all.each do |report|
     puts "Raccoon Party!!!!!!"
     RaccoonParty.create(raccoon_id: Raccoon.all.sample.id, report_id: Report.all.sample.id)
   end

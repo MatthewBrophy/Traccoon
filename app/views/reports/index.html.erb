@@ -1,14 +1,38 @@
 <h1>This is a collection of all filed reports.</h1>
 
-<% @reports.each do |report| %>
+<!-- <% @reports.each do |report| %>
 <h3>Report # <%= report.id %></h3>
 <b>Report Date: <%= report.report_date %></b><br>
-<b>Neighborhood:</b> <%= report.neigh_name %> | <b>Address:</b> <%= report.address %><br>
+<b>Neighborhood:</b> <%= report.neighborhood_name %> | <b>Address:</b> <%= report.address %><br>
 <b>User Reported: <%= report.user.name %></b><br>
 <b>Raccoons involved in the incident:</b>
   <% report.raccoons.each do |raccoon| %>
-   | <%= raccoon.name %> |
+   | <%= link_to  raccoon.name, raccoon %> |
+  <% end %>
+<% end %> -->
+<h1>Queen Anne</h1>
+<% @reports.by_neighborhood("Queen Anne").each do |report| %>
+<h3>Report # <%= report.id %></h3>
+<b>Report Date: <%= report.report_date %></b><br>
+<b>Neighborhood:</b> <%= report.neighborhood_name %> | <b>Address:</b> <%= report.address %><br>
+<b>User Reported: <%= report.user.name %></b><br>
+<b>Raccoons involved in the incident:</b>
+  <% report.raccoons.each do |raccoon| %>
+   | <%= link_to  raccoon.name, raccoon %> |
   <% end %>
 <% end %>
+<h1>Ballard</h1>
+# of Reports <%= @reports.by_neighborhood("Ballard").count %>
+<h1>West Seattle</h1>
 
-<!-- rails n+1 -->
+<h1>Downtown</h1>
+
+<h1>Capitol Hill</h1>
+
+<h1>Lake City</h1>
+
+<h1>University District</h1>
+
+<h1>Wallingford</h1>
+
+<h1>Shoreline</h1>
