@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   get '/login', to: 'sessions#new'
+  delete '/logout', to: 'sessions#destroy'
   resource :welcome, only: :show
   resources :raccoons do 
     resources :comments

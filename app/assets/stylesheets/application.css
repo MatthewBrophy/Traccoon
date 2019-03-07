@@ -18,8 +18,13 @@
  body {
    background-color: #E0FFE9;
    font-family: 'Raleway', sans-serif;
-
  }
+
+ footer{
+  position:fixed;
+  bottom:0;
+  left:0;
+}
 /* login column width */
  .login-column {
   max-width: 450px; 
