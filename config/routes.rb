@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     resources :comments
   end
   get '/raccoons/:id/track', to: 'raccoons#track', as: 'track_raccoon'
+  resource :analytics, only: :show
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

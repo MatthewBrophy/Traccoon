@@ -40,13 +40,13 @@
   </div>
   <div class="row" style="text-align:center">
       <div class="col">
-          <h2><%= link_to  "Report a Raccoon!", new_report_path %> </h2>
+          <h2><%= link_to  "Report a Raccoon!", new_report_path, class: "home-link" %> </h2>
         </div>
         <div class="col">
-          <h2><%= link_to  "Look at Some Cute Raccoons!", raccoons_path %></h2>
+          <h2><%= link_to  "Look at Some Cute Raccoons!", raccoons_path, class: "home-link" %></h2>
         </div>
         <div class="col">
-          <h2><%= link_to  "Check in with #{@current_user.home.name}", @current_user.home %></h2>
+          <h2><%= link_to  "Check in with #{@current_user.home.name}", @current_user.home, class: "home-link" %></h2>
         </div>
   </div>
 </div>
