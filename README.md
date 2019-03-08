@@ -11,3 +11,4 @@
   - A user can see all reports
   - A user can see all raccoons
   - A user can only see all pages if they are logged in
+  - A user can comment on a raccoons page
