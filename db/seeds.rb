@@ -684,10 +684,10 @@ def seed_comments
   end
 end
 
-# seed_neighborhoods
-# seed_users
-# seed_raccoons
-# seed_locations
-# seed_reports
-# seed_raccoon_parties
+seed_neighborhoods
+seed_users
+seed_raccoons
+seed_locations
+seed_reports
+seed_raccoon_parties
 seed_comments

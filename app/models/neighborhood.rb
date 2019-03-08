@@ -19,7 +19,7 @@ class Neighborhood < ApplicationRecord
   end
 
   # -Most users per neighbrohood
-  def self.most_users_per_neigh
+  def self.most_users
     @users = User.all 
     home_neighborhoods = []
     home_neighborhood_count = 0

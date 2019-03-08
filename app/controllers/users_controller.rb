@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to welcome_path
      else
-      flash[:message] = "Invalid Password. Please make sure password matches and is over 6 characters."
+      flash[:message] = "Invalid Credentials. Please make sure: 1. Password and confirmation matches and is over 6 characters. 2. Email format is Valid."
       redirect_to new_user_path
      end
   end
