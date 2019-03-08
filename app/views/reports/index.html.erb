@@ -1,28 +1,136 @@
-<h1 class="">This is a collection of all filed reports.</h1>
-
-
-<h1>Queen Anne</h1>
+<h1 class="text-center">All Reports</h1>
+<br>
+<br>
+<div class="container" style="margin:1em">
+<h1 style="text-decoration:underline">Queen Anne | Total Reports: <%= @reports.by_neighborhood("Queen Anne").count %></h1>
 <% @reports.by_neighborhood("Queen Anne").each do |report| %>
-<h3><%= link_to  "Report #:#{report.id}", report %></h3>
-<b>Report Date:<b><%= report.report_date %> | <b>Address:</b> <%= report.address %><br>
-<b>User Reported: <%= report.user.name %></b><br>
-<b>Raccoons involved in the incident:</b>
-  <% report.raccoons.each do |raccoon| %>
-   | <%= link_to  raccoon.name, raccoon %> |
-  <% end %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
 <% end %>
-<h1>Ballard</h1>
-# of Reports <%= @reports.by_neighborhood("Ballard").count %>
-<h1>West Seattle</h1>
 
-<h1>Downtown</h1>
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">Ballard | Total Reports: <%= @reports.by_neighborhood("Ballard").count %></h1>
+<% @reports.by_neighborhood("Ballard").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">West Seattle | Total Reports: <%= @reports.by_neighborhood("West Seattle").count %></h1>
+<% @reports.by_neighborhood("West Seattle").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
 
-<h1>Capitol Hill</h1>
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">Downtown Seattle | Total Reports: <%= @reports.by_neighborhood("Downtown Seattle").count %></h1>
 
-<h1>Lake City</h1>
+<% @reports.by_neighborhood("Downtown Seattle").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
 
-<h1>University District</h1>
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">Capitol Hill | Total Reports: <%= @reports.by_neighborhood("Capitol Hill").count %></h1>
+<% @reports.by_neighborhood("Capitol Hill").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
 
-<h1>Wallingford</h1>
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">Lake City | Total Reports: <%= @reports.by_neighborhood("Lake City").count %></h1>
+<% @reports.by_neighborhood("Lake City").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
 
-<h1>Shoreline</h1>
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">University District | Total Reports: <%= @reports.by_neighborhood("University District").count %></h1>
+<% @reports.by_neighborhood("University District").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
+
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">Wallingford | Total Reports: <%= @reports.by_neighborhood("Wallingford").count %></h1>
+<% @reports.by_neighborhood("Wallingford").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
+
+<br>
+<br>
+<br>
+<h1 style="text-decoration:underline">Shoreline | Total Reports: <%= @reports.by_neighborhood("Shoreline").count %></h1>
+<% @reports.by_neighborhood("Shoreline").each do |report| %>
+  <h3><%= link_to  report.report_date, report %></h3>
+  <div style="margin-left:1em">
+    <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
+    <b>Raccoons involved in the incident:</b>
+      <% report.raccoons.each do |raccoon| %>
+      | <%= link_to  raccoon.name, raccoon %> |
+      <% end %>
+    </div>
+<% end %>
+</div>
