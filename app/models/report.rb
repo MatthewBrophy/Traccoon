@@ -6,6 +6,7 @@ class Report < ApplicationRecord
   has_many :raccoons, through: :raccoon_parties
   belongs_to :location
   accepts_nested_attributes_for :location
+  validates :time, presence: true
 
   def report_date
     self.time.strftime(" %B %e, %Y")

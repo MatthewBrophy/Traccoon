@@ -2,15 +2,15 @@ require 'faker'
 
 def seed_neighborhoods
   puts "Seeding Neighborhoods"
-  Neighborhood.create(name: "Ballard", character: "Urban")
-  Neighborhood.create(name: "West Seattle", character: "Coastal")
-  Neighborhood.create(name: "Downtown Seattle", character: "Urban")
-  Neighborhood.create(name: "Capitol Hill", character: "Urban")
-  Neighborhood.create(name: "Queen Anne", character: "Urban")
-  Neighborhood.create(name: "Lake City", character: "Urban")
-  Neighborhood.create(name: "University District", character: "Urban")
-  Neighborhood.create(name: "Wallingford", character: "Urban")
-  Neighborhood.create(name: "Shoreline", character: "Suburban")
+  Neighborhood.create(name: "Ballard", character: "Urban", picture: "ballard.jpg")
+  Neighborhood.create(name: "West Seattle", character: "Coastal", picture: "wseattle.jpg")
+  Neighborhood.create(name: "Downtown Seattle", character: "Urban", picture: "downtown.jpg")
+  Neighborhood.create(name: "Capitol Hill", character: "Urban", picture: "caphill.jpg")
+  Neighborhood.create(name: "Queen Anne", character: "Urban", picture: "queenanne.jpg")
+  Neighborhood.create(name: "Lake City", character: "Urban", picture: "lakecity.png")
+  Neighborhood.create(name: "University District", character: "Urban", picture: "udistrict.jpg")
+  Neighborhood.create(name: "Wallingford", character: "Urban", picture: "wallingford.jpg")
+  Neighborhood.create(name: "Shoreline", character: "Suburban", picture: "shoreline.jpg")
   puts "Neighborhoods successfully seeded"
 end
 

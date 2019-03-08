@@ -5,7 +5,7 @@
         <%= f.date_field :time %> 
         <%= f.fields_for :raccoons, @report.raccoons.build do |raccoons_fields| %>
         <b><%= f.label :name, "Select a Raccoon!" %></b>
-        <%= f.collection_select :raccoon_ids, Raccoon.all, :id, :name%>  
+        <%= f.collection_check_boxes :raccoon_ids, Raccoon.all, :id, :name%>  
       <% end %> 
 
 <b>Don't see the Raccoon want to report?</b>
@@ -19,3 +19,9 @@
 
 <%= f.submit %>
 <% end %>
+
+
+
+<footer>
+  <span class="text-muted"><%= image_tag("raccoon.png", height: 50, class: 'image') %>.</span>
+</footer>

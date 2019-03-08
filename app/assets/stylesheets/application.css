@@ -21,7 +21,7 @@
  }
 
  footer{
-  position:fixed;
+  position: relative;
   bottom:0;
   left:0;
 }
@@ -51,4 +51,10 @@
   
   font-family: 'Permanent Marker', cursive;
   color: #6F7F74
+}
+.but {
+     background:none!important;
+     border:none; 
+     padding:0!important;
+     font: inherit;
 }

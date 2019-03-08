@@ -5,9 +5,10 @@ Rails.application.routes.draw do
   resources :neighborhoods
   resources :locations
   resources :users
+  post '/logout', to: 'sessions#destroy'
   resources :sessions
   get '/login', to: 'sessions#new'
-  delete '/logout', to: 'sessions#destroy'
+
   resource :welcome, only: :show
   resources :raccoons do 
     resources :comments
