@@ -1,18 +1,21 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm">
+    <div class="col">
     
     </div>
-    <%= image_tag (@raccoon.picture), class: "img-thumbnail"%><br>
-    <div class="col-sm">
+    <%= image_tag (@raccoon.picture), class: "img-thumbnail r-show-pic-size"%><br>
+    <div class="col-4">
     <h2><%= @raccoon.name %></h2>
     
     <b>Favorite Food:</b> <%= @raccoon.favorite_food %><br>
     <b>Disposition:</b> <%= @raccoon.disposition %><br>
     <b>Size:</b> <%= @raccoon.size %><br>
     <b>Gender:</b> <%= @raccoon.gender %><br>
+    <%= bootstrap_form_for @raccoon do |f| %>
+    <b>Seen At:</b> <%= f.collection_select :location_ids, @raccoon.locations.all, :id, :address, hide_label: true %>
+    <% end %>
     </div>
-    <div class="col-sm">
+    <div class="col">
     </div>
 </div>
   <div class="spacing-raccoon-show">
@@ -20,19 +23,12 @@
   </div>
 
   <div class="row">
-    <div class="col">
-    </div>
-    <div class="col-6">
-      <%= bootstrap_form_for @raccoon do |f| %>
-      <b>Seen At:</b> <%= f.collection_select :location_ids, @raccoon.locations.all, :id, :address %>
-      <% end %>
-
+    <div class="col-4"><br>
+      
+      <h3>Leave a Comment</h3>
       <%= bootstrap_form_for ([@raccoon, @comment]) do |f| %>
-      <%= f.label :comment_title, "Comment Title" %>
-      <%= f.text_field :comment_title %>
-
-      <%= f.label :comment_text, "Comment" %>
-      <%= f.text_area :comment_text %>
+      <%= f.text_field :comment_title, placeholder: "Comment Title", hide_label: true %>
+      <%= f.text_area :comment_text, placeholder: "Comment Body", hide_label: true %>
 
       <%= f.submit %>
       <% end %>
@@ -40,13 +36,22 @@
     <div class="col">
       </div>
   </div> 
+<div class="spacing-raccoon-show">
+
 </div>
+<div class="row">
+    <div class="col-5"><br>
+        <h3>Comments: </h3><br>
+        <ul>
+        <% @raccoon.comments.each do |comment| %>
+        <div><p><b>Title:</b> <%= comment.comment_title %></p>
+        <p><b>Comment:</b> <%= comment.comment_text %></p></div><br>
+        <% end %>
+        </ul>
+        </div>
 
-
-<ul>
-  <% @raccoon.comments.each do |comment| %>
-  <div><p>Title: <%= comment.comment_title %></p>
-  <p>Comment: <%= comment.comment_text %></p></div>
-  <% end %>
-</ul>
-
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>

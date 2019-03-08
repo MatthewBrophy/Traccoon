@@ -59,3 +59,11 @@
      font: inherit;
 }
 
+.r-show-pic-size {
+  height: 300px;
+}
+
+.spacing-raccoon-show {
+  height: 100px;
+  border-bottom: 1px solid black;
+}

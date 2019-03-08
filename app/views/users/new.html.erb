@@ -8,16 +8,16 @@
   <div class="row">
     <div class="col-sm">
     </div>
-    <div class="col-sm">
+    <div class="col-sm"><br><br>
    
         <h5>Create an Account with us!</h5>
         <%= bootstrap_form_for @user, html: {class: "form group"} do|f| %>
-        <%= f.text_field :name, placeholder: 'Name' %>
+        <%= f.text_field :name, placeholder: 'Name',  hide_label: true %>
         <%= f.label :neighborhood, "Select Your Neighborhood: " %>
-        <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name) %>
-        <%= f.text_field :email, placeholder: 'Email', class: "form_control"  %>
-        <%= f.text_field :password, placeholder: 'Password', class: "form_control"  %>
-        <%= f.text_field :password_confirmation, placeholder: 'Password Confirmation', class: "form_control"  %>
+        <%= f.collection_select(:neighborhood_id, Neighborhood.all, :id, :name, hide_label: true) %>
+        <%= f.text_field :email, placeholder: 'Email', class: "form_control", hide_label: true  %>
+        <%= f.text_field :password, placeholder: 'Password', class: "form_control",  hide_label: true  %>
+        <%= f.text_field :password_confirmation, placeholder: 'Password Confirmation', class: "form_control",  hide_label: true  %>
       
         <%= f.submit 'Submit', class: "btn btn-primary" %>
         <% end %>
