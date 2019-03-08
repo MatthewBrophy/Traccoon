@@ -21,7 +21,7 @@
     src="https://www.google.com/maps/embed/v1/place?key=&q=<%=address%>" allowfullscreen>
     </iframe>
     <div class="card-body">
-      <p class="card-text text-center"><%= address %></p>
+      <p class="card-text text-center"><%= address.gsub("+", " ").gsub(",", ", ") %></p>
     </div>
   </div>
 <% end %>  

@@ -8,7 +8,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -23,7 +23,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -37,7 +37,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -53,7 +53,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -68,7 +68,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -83,7 +83,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -98,7 +98,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -113,7 +113,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
@@ -128,7 +128,7 @@
   <div style="margin-left:1em">
     <b>Address:</b> <%= report.address %> | <b>Reporter:</b> <%= report.user.name %><br>
     <b>Raccoons involved in the incident:</b>
-      <% report.raccoons.each do |raccoon| %>
+      <% report.raccoons.uniq.each do |raccoon| %>
       | <%= link_to  raccoon.name, raccoon %> |
       <% end %>
     </div>
