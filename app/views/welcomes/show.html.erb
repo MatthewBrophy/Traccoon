@@ -41,12 +41,15 @@
   <div class="row" style="text-align:center">
       <div class="col">
           <h2><%= link_to  "Report a Raccoon!", new_report_path, class: "home-link" %> </h2>
+          <%= image_tag("icon.png", height: 100, class: 'image') %>
         </div>
         <div class="col">
           <h2><%= link_to  "Look at Some Cute Raccoons!", raccoons_path, class: "home-link" %></h2>
+          <%= image_tag("icon.png", height: 100, class: 'image') %>
         </div>
         <div class="col">
           <h2><%= link_to  "Check in with #{@current_user.home.name}", @current_user.home, class: "home-link" %></h2>
+          <%= image_tag("icon.png", height: 100, class: 'image') %>
         </div>
   </div>
 </div>

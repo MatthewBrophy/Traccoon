@@ -1,13 +1,11 @@
+
 class Analytic < ActiveRecord::Base 
 
-  def show
-  end
+
 
 
   # -neigborhood with the most raccoons
-  def neighborhood_raccoons
 
-  end
   # -Most active user based on how
   def most_active_user 
   end
