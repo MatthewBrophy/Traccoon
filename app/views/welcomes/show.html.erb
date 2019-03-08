@@ -7,7 +7,7 @@
     
     </div>
     <div class="align-middle">
-    <h4>Welcome <%= @current_user.name.capitalize %></h4>
+    <h4>Welcome <%= @current_user.name.titleize %></h4>
   </div>
   <div class="col-sm">
   
@@ -20,11 +20,33 @@
     
     <div class="align-middle">
     <%= image_tag("raccoon.png", height: 150, class: 'image') %><br>
-    
     </div>
+    
     
     <div class="col-sm">
     
     </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+    </div>
+
+    <div class="align-middle" style="text-align:center">
+      <h3>What Would You Like to Do?</h3><br>
+    </div>        
+      
+    <div class="col-sm">
+    </div>
+  </div>
+  <div class="row" style="text-align:center">
+      <div class="col">
+          <h2><%= link_to  "Report a Raccoon!", new_report_path %> </h2>
+        </div>
+        <div class="col">
+          <h2><%= link_to  "Look at Some Cute Raccoons!", raccoons_path %></h2>
+        </div>
+        <div class="col">
+          <h2><%= link_to  "Check in with #{@current_user.home.name}", @current_user.home %></h2>
+        </div>
   </div>
 </div>

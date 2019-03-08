@@ -2,13 +2,21 @@
 
 <div class="container">
   <div class="row">
+    <div class="col"></div>
     <div class="col">
+      <h1 style="text-align:center">Neighborhoods</h1><br><br><br>
+    </div>
+    <div class="col"></div>
 
+  </div>
+  <div class="row">
+    <div class="col">
     </div>
     <div class="col-6">
       <% @neighborhoods.each do |neighborhood|  %>
-      <h4><%= link_to  neighborhood.name, neighborhood_path(neighborhood) %></h4>
-     <%= neighborhood.picture %>
+      <h1 style="text-align:center"><%= link_to  neighborhood.name, neighborhood_path(neighborhood) %></h1>
+      <%= link_to image_tag(neighborhood.picture, class: "img-thumbnail"), neighborhood%><br><br>
+      <div class="row"></div>
       <% end %>
     </div>
     <div class="col">

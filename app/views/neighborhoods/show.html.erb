@@ -6,11 +6,34 @@
 
     </div>
     <div class="col-6">
-      <h3><%= @neighborhood.name %></h3>
-      <h4><%= @neighborhood.character %></h4>
+      <h1 style="text-align:center; text-decoration:underline"><%= @neighborhood.name %></h1>
+      <%= image_tag (@neighborhood.picture), class: "img-thumbnail"%>
+      <h2 style="text-align:center">Total reports in <%= @neighborhood.name %>: <%=@neighborhood.locations.count%></h2><br>
+      <h2 style="text-align:center"><%= link_to  "Did you see a Raccoon?! REPORT IT!", new_report_path %></h2><br>
+      <h2 style="text-align:center; text-decoration:underline">Raccoons Sighted Here: <%= @neighborhood.unique_raccoons.count %></h2>
     </div>
     <div class="col">
       
     </div>
+    <div class="card-columns">
+        <% @neighborhood.unique_raccoons.each do |raccoon|  %>  
+        <div class="card img-thumbnail">
+          <%= link_to image_tag(raccoon.picture, class: 'card-img-top'), raccoon %>
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to  raccoon.name, raccoon %></h5>
+            <p class="card-text">
+              <b>Favorite Food:</b> <%= raccoon.favorite_food %><br>
+              <b>Known for being</b> <%= raccoon.disposition %><br>
+              <b>Most often seen in:</b> <%= raccoon.favorite_neighborhood %><br>
+              <%= link_to  "See All Sightings", track_raccoon_url(raccoon) %>
+            </p>
+          </div>
+        </div>
+        <% end %>  
+      </div>
+      
+      <footer>
+        <span class="text-muted"><%= image_tag("raccoon.png", height: 50, class: 'image') %>.</span>
+      </footer>
   </div>
 </div>

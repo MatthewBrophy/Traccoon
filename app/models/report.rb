@@ -34,18 +34,6 @@ class Report < ApplicationRecord
     reports_in_neighborhood
   end
 
-  def self.all_reports_sorted_by_neighborhood
-    queen_anne = Report.by_neighborhood("Queen Anne")
-    ballard = Report.by_neighborhood("Ballard")
-    west_seattle = Report.by_neighborhood("West Seattle")
-    downtown = Report.by_neighborhood("Downtown Seattle")
-    capitol_hill = Report.by_neighborhood("Capitol Hill")
-    lake_city = Report.by_neighborhood("Lake City")
-    u_district = Report.by_neighborhood("University District")
-    wallingford = Report.by_neighborhood("Wallingford")
-    shoreline = Report.by_neighborhood("Shoreline")
-    binding.pry
-  end
 end
 
 
