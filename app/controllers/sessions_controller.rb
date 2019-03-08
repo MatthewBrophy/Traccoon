@@ -9,7 +9,7 @@ def create
     session[:user_id] = @user.id #save the @user.id in session[:user_id]
     redirect_to welcome_path
   else  
-    flash[:message] = "Invalid username or password"
+    flash[:message] = "Invalid username or password. Please sign up if you haven't yet."
     redirect_to new_session_path
   end
 end

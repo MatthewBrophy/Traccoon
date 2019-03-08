@@ -17,9 +17,9 @@ class UsersController < ApplicationController
      if @user.valid?
       @user.save
       session[:user_id] = @user.id
-      redirect_to new_session_path
+      redirect_to welcome_path
      else
-      flash[:message] = "Passwords don't match"
+      flash[:message] = "Invalid Password. Please make sure password matches and is over 6 characters."
       redirect_to new_user_path
      end
   end

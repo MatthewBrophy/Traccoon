@@ -672,11 +672,16 @@ end
 
 def seed_raccoon_parties
   puts "Seeding Raccoon Parties"
-  500.times do 
+  2000.times do 
     puts "Raccoon Party!!!!!!"
     RaccoonParty.create(raccoon_id: Raccoon.all.sample.id, report_id: Report.all.sample.id)
   end
   puts "Raccoon Parties have ended :(..."
+end
+
+def seed_comments
+  500.times do Comment.create!(user_id: User.all.sample.id, raccoon_id: Raccoon.all.sample.id, comment_text: Faker::ChuckNorris.fact, comment_tite: Faker::GreekPhilosophers.quote)
+  end
 end
 
 seed_neighborhoods
@@ -685,3 +690,4 @@ seed_raccoons
 seed_locations
 seed_reports
 seed_raccoon_parties
+seed_comments
