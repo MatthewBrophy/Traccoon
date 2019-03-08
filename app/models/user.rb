@@ -14,4 +14,18 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }
   has_secure_password
   
+  def self.most_active_user 
+    report_count = 0
+    active_user = nil
+    @users = User.all 
+    @users.each do |user|
+      if user.reports.count > report_count
+        report_count = user.reports.count 
+        active_user = user
+      else 
+      end
+    end
+    puts "#{active_user.name} has #{report_count} reports"
+  end
+
 end

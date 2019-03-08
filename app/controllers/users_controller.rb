@@ -34,6 +34,20 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def self.most_active_user 
+    report_count = 0
+    @users = User.all 
+    @users.each do |user|
+      if user.reports.count > report_count
+        report_count = user.reports.count 
+      else 
+        report_count 
+      end
+    end
+    
+
+  end
+
   private 
   def user_params
     params.require(:user).permit(:name, :email, :neighborhood_id, :password, :password_confirmation)
