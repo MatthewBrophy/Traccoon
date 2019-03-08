@@ -9,8 +9,11 @@
         <%= f.label :time, "Date" %>
         <%= f.date_field :time, hide_label: true %> <br>
         <%= f.fields_for :raccoons, @report.raccoons.build do |raccoons_fields| %>
-        <b><%= f.label :name, "Select a Raccoon!" %></b>
-        <%= f.collection_check_boxes :raccoon_ids, Raccoon.all, :id, :name, hide_label: true %>  
+        <b><%= f.label :name, "Select a Raccoon!" %></b><br>
+        <i>Note: please use command to select multiple raccoons</i>
+        <%= f.collection_select :raccoon_ids, Raccoon.all, :id, :name, {prompt: true, hide_label: true}, {multiple: true} %>  
+
+
       <% end %> 
   
 
@@ -31,8 +34,9 @@
 
 </div>
 
+
+</div>
 <footer>
   <span class="text-muted"><%= image_tag("raccoon.png", height: 50, class: 'image') %>.</span>
 </footer>
-</div>
 </div>
