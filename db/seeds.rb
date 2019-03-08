@@ -680,14 +680,14 @@ def seed_raccoon_parties
 end
 
 def seed_comments
-  500.times do Comment.create!(user_id: User.all.sample.id, raccoon_id: Raccoon.all.sample.id, comment_text: Faker::ChuckNorris.fact, comment_tite: Faker::GreekPhilosophers.quote)
+  500.times do Comment.create!(user_id: User.all.sample.id, raccoon_id: Raccoon.all.sample.id, comment_text: Faker::ChuckNorris.fact, comment_title: Faker::GreekPhilosophers.quote)
   end
 end
 
-seed_neighborhoods
-seed_users
-seed_raccoons
-seed_locations
-seed_reports
-seed_raccoon_parties
+# seed_neighborhoods
+# seed_users
+# seed_raccoons
+# seed_locations
+# seed_reports
+# seed_raccoon_parties
 seed_comments
