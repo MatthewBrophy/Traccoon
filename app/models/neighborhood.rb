@@ -17,4 +17,22 @@ class Neighborhood < ApplicationRecord
     n = Neighborhood.all.select { |m| m.raccoons.count == raccoon_counts.max}
     n[0].name
   end
+
+  # -Most users per neighbrohood
+  def self.most_users_per_neigh
+    @users = User.all 
+    home_neighborhoods = []
+    home_neighborhood_count = 0
+    home_neighborhood = nil
+    @users.each do |user|
+      home_neighborhoods << user.home
+      home_neighborhoods.each  do |n|
+        if home_neighborhoods.count(n) > home_neighborhood_count
+          home_neighborhood_count = home_neighborhoods.count(n)
+          home_neighborhood = n.name
+        end
+      end
+    end
+    home_neighborhood
+  end
 end

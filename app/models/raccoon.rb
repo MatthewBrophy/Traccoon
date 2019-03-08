@@ -76,4 +76,18 @@ class Raccoon < ApplicationRecord
     end
     puts "The raccoon with the most comments is #{pop_raccoon}"
   end
+
+  # -Most active raccoon
+  def self.most_active_raccoon
+    @raccoons = Raccoon.all 
+    raccoon_location_count = 0
+    raccoon_name = nil 
+    @raccoons.each do |r|
+      if r.locations.count > raccoon_location_count
+        raccoon_location_count = r.locations.count 
+        raccoon_name = r.name 
+      end 
+    end
+    raccoon_name
+  end
 end
