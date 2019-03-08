@@ -25,7 +25,7 @@ class User < ApplicationRecord
       else 
       end
     end
-    puts "#{active_user.name} has #{report_count} reports"
+    active_user.name
   end
 
 end

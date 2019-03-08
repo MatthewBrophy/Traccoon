@@ -60,7 +60,7 @@ class Raccoon < ApplicationRecord
         the_favorite_food = food
       end
     end
-    puts "Favorite food among raccoons is #{the_favorite_food}"
+    the_favorite_food
   end
 
   # -Most popular raccoon - most comments on a single raccoon page
@@ -74,7 +74,7 @@ class Raccoon < ApplicationRecord
         pop_raccoon = raccoon.name
       end
     end
-    puts "The raccoon with the most comments is #{pop_raccoon}"
+    pop_raccoon
   end
 
   # -Most active raccoon

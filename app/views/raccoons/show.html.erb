@@ -13,6 +13,7 @@
     <b>Gender:</b> <%= @raccoon.gender %><br>
     <%= bootstrap_form_for @raccoon do |f| %>
     <b>Seen At:</b> <%= f.collection_select :location_ids, @raccoon.locations.all, :id, :address, hide_label: true %>
+    <h4 style="text-align:center"><%= link_to  "Track #{@raccoon.name}!", track_raccoon_path %></h4>
     <% end %>
     </div>
     <div class="col">
@@ -33,25 +34,22 @@
       <%= f.submit %>
       <% end %>
     </div>
-    <div class="col">
-      </div>
-  </div> 
+
+   
 <div class="spacing-raccoon-show">
 
 </div>
-<div class="row">
-    <div class="col-5"><br>
-        <h3>Comments: </h3><br>
+    <div class="col"><br>
+        <h3 style="text-align:center">Comments: </h3><br>
         <ul>
         <% @raccoon.comments.each do |comment| %>
         <div><p><b>Title:</b> <%= comment.comment_title %></p>
         <p><b>Comment:</b> <%= comment.comment_text %></p></div><br>
         <% end %>
         </ul>
-        </div>
-
       <div class="col">
       </div>
     </div>
+  </div>
   </div>
 </div>
