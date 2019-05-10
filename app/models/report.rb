@@ -1,4 +1,4 @@
-require 'pry'
+
 class Report < ApplicationRecord
   belongs_to :user
   has_one :neighborhood, through: :location

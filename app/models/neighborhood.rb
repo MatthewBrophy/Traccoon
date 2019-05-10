@@ -1,4 +1,4 @@
-require 'pry'
+
 class Neighborhood < ApplicationRecord
   has_many :reports
   has_many :raccoons, through: :reports

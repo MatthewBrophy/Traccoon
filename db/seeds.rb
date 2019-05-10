@@ -1,5 +1,3 @@
-require 'faker'
-
 def seed_neighborhoods
   puts "Seeding Neighborhoods"
   Neighborhood.create(name: "Ballard", character: "Urban", picture: "ballard.jpg")
