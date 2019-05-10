@@ -12,9 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2019_03_08_003911) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "comments", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "raccoon_id"
+    t.bigint "user_id"
+    t.bigint "raccoon_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "comment_text"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_03_08_003911) do
   end
 
   create_table "locations", force: :cascade do |t|
-    t.integer "neighborhood_id"
+    t.bigint "neighborhood_id"
     t.string "address"
     t.float "latitude"
     t.float "longitude"
@@ -42,8 +45,8 @@ ActiveRecord::Schema.define(version: 2019_03_08_003911) do
   end
 
   create_table "raccoon_parties", force: :cascade do |t|
-    t.integer "raccoon_id"
-    t.integer "report_id"
+    t.bigint "raccoon_id"
+    t.bigint "report_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["raccoon_id"], name: "index_raccoon_parties_on_raccoon_id"
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 2019_03_08_003911) do
     t.string "gender"
     t.string "favorite_food"
     t.string "disposition"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
@@ -66,7 +69,7 @@ ActiveRecord::Schema.define(version: 2019_03_08_003911) do
 
   create_table "reports", force: :cascade do |t|
     t.datetime "time"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -82,4 +85,10 @@ ActiveRecord::Schema.define(version: 2019_03_08_003911) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "comments", "raccoons"
+  add_foreign_key "comments", "users"
+  add_foreign_key "locations", "neighborhoods"
+  add_foreign_key "raccoon_parties", "raccoons"
+  add_foreign_key "raccoon_parties", "reports"
+  add_foreign_key "reports", "users"
 end
