@@ -1,19 +1,17 @@
- body {
-   background-color: #E0FFE9;
-   font-family: 'Raleway', sans-serif;
- }
+body {
+  background-color: #e0ffe9;
+  font-family: "Raleway", sans-serif;
+}
 
- footer{
+footer {
   position: relative;
-  bottom:0;
-  left:0;
+  bottom: 0;
+  left: 0;
 }
 /* login column width */
- .login-column {
-  max-width: 450px; 
- }
-
- 
+.login-column {
+  max-width: 450px;
+}
 
 .spacing {
   width: 100%;
@@ -31,15 +29,14 @@
 }
 
 .nav-bar-title {
-  
-  font-family: 'Permanent Marker', cursive;
-  color: #6F7F74
+  font-family: "Permanent Marker", cursive;
+  color: #6f7f74;
 }
 .but {
-     background:none!important;
-     border:none; 
-     padding:0!important;
-     font: inherit;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
 }
 
 .r-show-pic-size {
@@ -51,15 +48,14 @@
   border-bottom: 1px solid black;
 }
 .home-link {
-  color: #4E5951;
-    text-decoration: none;
+  color: #4e5951;
+  text-decoration: none;
 }
 
-.home-link:hover 
-{
-     color:#00A0C6; 
-     text-decoration:none; 
-     cursor:pointer;  
+.home-link:hover {
+  color: #00a0c6;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .footer {
@@ -68,3 +64,4 @@
   bottom: 0;
   width: 100%;
   text-align: center;
+}
