@@ -12,6 +12,9 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+default: &default
+  host: localhost
+
 development:
   adapter: postgresql
   encoding: unicode
