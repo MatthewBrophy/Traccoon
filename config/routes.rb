@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcomes#show'
   resources :reports
   resources :raccoon_parties
   resources :comments
