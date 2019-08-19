@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :locations
   resources :users
   post '/logout', to: 'sessions#destroy'
+  post '/logout/:id', to: 'sessions#destroy'
   resources :sessions
   get '/login', to: 'sessions#new'
 

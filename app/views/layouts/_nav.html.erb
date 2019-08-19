@@ -1,25 +1,21 @@
-  
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class=" p-4">
-
-      <a class="nav-item nav-link active" href="/welcome"><%= image_tag("icon.png", height: 25, class: 'image')%>Home</a>
-      <a class="nav-item nav-link active" href="/reports/new"><%= image_tag("icon.png", height: 25, class: 'image')%>Create a Report</a>
-      <a class="nav-item nav-link active" href="/raccoons"><%= image_tag("icon.png", height: 25, class: 'image')%>All Raccoons</a>
-      <a class="nav-item nav-link active" href="/reports"><%= image_tag("icon.png", height: 25, class: 'image')%>All Reports</a>
-      <a class="nav-item nav-link active" href="/neighborhoods"><%= image_tag("icon.png", height: 25, class: 'image')%>Neighborhoods</a>
-      <a class="nav-item nav-link active" href="/analytics"><%= image_tag("icon.png", height: 25, class: 'image')%>Site Statistics</a>
-      
-    </div>
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class=" p-4">
+    <a class="nav-item nav-link active" href="/welcome"><%= image_tag("icon.png", height: 25, class: 'image')%>Home</a>
+    <a class="nav-item nav-link active" href="/reports/new"><%= image_tag("icon.png", height: 25, class: 'image')%>Create a Report</a>
+    <a class="nav-item nav-link active" href="/raccoons"><%= image_tag("icon.png", height: 25, class: 'image')%>All Raccoons</a>
+    <a class="nav-item nav-link active" href="/reports"><%= image_tag("icon.png", height: 25, class: 'image')%>All Reports</a>
+    <a class="nav-item nav-link active" href="/neighborhoods"><%= image_tag("icon.png", height: 25, class: 'image')%>Neighborhoods</a>
+    <a class="nav-item nav-link active" href="/analytics"><%= image_tag("icon.png", height: 25, class: 'image')%>Site Statistics</a>
   </div>
-  <nav class="navbar nav-fixed">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
-      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" value="Menu">
-      <span>Menu</span>
-    </button>
-   <h1 class="nav-bar-title"><%=link_to image_tag("raccoon.png", height: 50, class: 'image'), welcome_url%> Traccoon</h1>
-    <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'delete'}) do %>
-    <input type="submit" value="logout" class="but">
-    <% end %>
-  </nav>
 </div>
-
+<nav class="navbar nav-fixed">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" value="Menu">
+    <span>Menu</span>
+  </button>
+  <h1 class="nav-bar-title"><%=link_to image_tag("raccoon.png", height: 50, class: 'image'), welcome_url%> Traccoon</h1>
+  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'delete'}) do %>
+    <input type="submit" value="logout" class="but">
+  <% end %>
+</nav>
+</div>
