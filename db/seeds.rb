@@ -658,14 +658,9 @@ def seed_reports
   
   Location.all.each do |location|
     puts "Creating Report"
-    Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, location_id: location.id)
+    Report.create!(time: Faker::Date.backward(days: 730), user_id: User.all.sample.id, location_id: location.id)
     puts "Successfully Created Report"
   end
-  # 100.times do 
-  #   puts "Creating Report"
-  #   Report.create!(time: Faker::Date.backward(730), user_id: User.all.sample.id, location_id: Location.all.sample.id)
-  #   puts "Successfully Created Report"
-  # end
 end
 
 def seed_raccoon_parties
