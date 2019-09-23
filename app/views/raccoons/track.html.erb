@@ -16,7 +16,7 @@
     <% @raccoon.gmaps_sightings.each do |address|  %>
       <div class="card img-thumbnail">
         <iframe class="track-iframe"
-    src="https://www.google.com/maps/embed/v1/place?key=<%=ENV["API_KEY"]%>&q=<%=address%>" allowfullscreen>
+    src="https://www.google.com/maps/embed/v1/place?key=#API_KEY_HERE&q=<%=address%>" allowfullscreen>
         </iframe>
         <div class="card-body">
           <p class="card-text text-center"><%= address.gsub("+", " ").gsub(",", ", ") %></p>

@@ -1,35 +1,22 @@
-
 <% if flash[:message] %>
 <div style="text-align:center; color:red">
-<h2><%= flash[:message] %></h2>
+  <h2><%= flash[:message] %></h2>
 </div>
 <% end %>
-    
 
 <div class="container">
   <div class="row">
+    <div class="col-sm"></div>
     <div class="col-sm">
-    </div>
-    <div class= "col-sm"><br>
+      <br />
 
-    <%= bootstrap_form_for :user, url: sessions_path, html: {class: "form group"} do |f| %>
-    <%= f.text_field :email, placeholder: 'Email', class: "form_control" %>
-    <%= f.text_field :password, placeholder: 'Password', class: "form_control" %>
-    <%= f.submit "Login", class: "btn btn-primary" %>
-    <%= link_to  "New to us? Sign up!", new_user_path %>
-
-    <% end %>    
+      <%= bootstrap_form_for :user, url: sessions_path, html: {class: "form
+      group"} do |f| %> <%= f.text_field :email, placeholder: 'Email', class:
+      "form_control" %> <%= f.password_field :password, placeholder: 'Password',
+      class: "form_control" %> <%= f.submit "Login", class: "btn btn-primary" %>
+      <%= link_to "New to us? Sign up!", new_user_path %> <% end %>
     </div>
 
-    <div class="col-sm">
-    </div>
+    <div class="col-sm"></div>
   </div>
 </div>
-     
-      
-
-
-
-
-
-

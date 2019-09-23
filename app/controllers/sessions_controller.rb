@@ -16,9 +16,8 @@ end
 
 
 def destroy
-  
   session.delete :user_id #session.clear will delete all things in it ex:cart or whatever
-  redirect_to new_session_path
+  redirect_to welcome_path
 end
 
 private 
